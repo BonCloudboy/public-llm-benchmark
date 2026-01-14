@@ -1,0 +1,10 @@
+# OS/filesystem noise
+.DS_Store
+Thumbs.db
+
+# Editor/tooling
+.vscode/
+.idea/
+
+# Logs
+*.log

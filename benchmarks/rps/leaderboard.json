@@ -1,0 +1,121 @@
+{
+  "generated_at": "2026-01-14T13:24:55.814Z",
+  "sets": [
+    {
+      "id": "bo3",
+      "label": "Best of 3",
+      "entries": [
+        {
+          "rank": 1,
+          "model_id": 1,
+          "provider": "mistral",
+          "model_name": "mistral-large-latest",
+          "display_name": "mistral/mistral-large-latest",
+          "rating": 1216,
+          "games_played": 1,
+          "wins": 1,
+          "losses": 0,
+          "draws": 0,
+          "win_rate": 100
+        },
+        {
+          "rank": 2,
+          "model_id": 3,
+          "provider": "mistral",
+          "model_name": "magistral-medium-latest",
+          "display_name": "mistral/magistral-medium-latest",
+          "rating": 1200,
+          "games_played": 0,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "win_rate": 0
+        },
+        {
+          "rank": 3,
+          "model_id": 4,
+          "provider": "deepseek",
+          "model_name": "deepseek-reasoner",
+          "display_name": "deepseek/deepseek-reasoner",
+          "rating": 1200,
+          "games_played": 0,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "win_rate": 0
+        },
+        {
+          "rank": 4,
+          "model_id": 2,
+          "provider": "deepseek",
+          "model_name": "deepseek-chat",
+          "display_name": "deepseek/deepseek-chat",
+          "rating": 1184,
+          "games_played": 1,
+          "wins": 0,
+          "losses": 1,
+          "draws": 0,
+          "win_rate": 0
+        }
+      ]
+    },
+    {
+      "id": "bo5",
+      "label": "Best of 5",
+      "entries": [
+        {
+          "rank": 1,
+          "model_id": 1,
+          "provider": "mistral",
+          "model_name": "mistral-large-latest",
+          "display_name": "mistral/mistral-large-latest",
+          "rating": 1200,
+          "games_played": 0,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "win_rate": 0
+        },
+        {
+          "rank": 2,
+          "model_id": 2,
+          "provider": "deepseek",
+          "model_name": "deepseek-chat",
+          "display_name": "deepseek/deepseek-chat",
+          "rating": 1200,
+          "games_played": 0,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "win_rate": 0
+        },
+        {
+          "rank": 3,
+          "model_id": 3,
+          "provider": "mistral",
+          "model_name": "magistral-medium-latest",
+          "display_name": "mistral/magistral-medium-latest",
+          "rating": 1200,
+          "games_played": 0,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "win_rate": 0
+        },
+        {
+          "rank": 4,
+          "model_id": 4,
+          "provider": "deepseek",
+          "model_name": "deepseek-reasoner",
+          "display_name": "deepseek/deepseek-reasoner",
+          "rating": 1200,
+          "games_played": 0,
+          "wins": 0,
+          "losses": 0,
+          "draws": 0,
+          "win_rate": 0
+        }
+      ]
+    }
+  ]
+}

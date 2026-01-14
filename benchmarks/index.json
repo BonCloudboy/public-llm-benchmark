@@ -1,0 +1,15 @@
+{
+  "generated_at": "2026-01-14T13:24:55.814Z",
+  "benchmarks": [
+    {
+      "benchmark_id": "rps",
+      "name": "Rock Paper Scissors",
+      "description": "LLM models play Rock Paper Scissors with ELO ratings.",
+      "path": "benchmarks/rps",
+      "run_types": [
+        "match"
+      ],
+      "updated_at": "2026-01-14T13:24:55.814Z"
+    }
+  ]
+}

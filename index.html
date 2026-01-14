@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LLM Benchmark Leaderboards</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="brand">
+        <span class="brand-mark">LB</span>
+        <div>
+          <h1>LLM Benchmark Leaderboards</h1>
+          <p class="subtitle">Public, read-only snapshots of benchmark runs.</p>
+        </div>
+      </div>
+      <div class="benchmark-picker">
+        <label for="benchmarkSelect">Benchmark</label>
+        <select id="benchmarkSelect"></select>
+      </div>
+    </header>
+
+    <main class="content">
+      <section class="card" id="benchmarkMeta">
+        <h2>Benchmark Overview</h2>
+        <div class="meta-grid">
+          <div>
+            <span class="meta-label">Name</span>
+            <span id="metaName">Loading...</span>
+          </div>
+          <div>
+            <span class="meta-label">Schema Version</span>
+            <span id="metaSchema">-</span>
+          </div>
+          <div>
+            <span class="meta-label">Generated</span>
+            <span id="metaGenerated">-</span>
+          </div>
+          <div>
+            <span class="meta-label">Run Types</span>
+            <span id="metaRunTypes">-</span>
+          </div>
+        </div>
+        <p id="metaDescription" class="meta-description"></p>
+      </section>
+
+      <section class="card" id="leaderboardsPanel">
+        <div class="panel-header">
+          <h2>Leaderboards</h2>
+          <div id="leaderboardTabs" class="tabs"></div>
+        </div>
+        <div id="leaderboardTables"></div>
+      </section>
+
+      <section class="card" id="runsPanel">
+        <div class="panel-header">
+          <h2>Runs</h2>
+        </div>
+        <div class="runs-controls">
+          <div class="input-group">
+            <label for="runSearch">Search by model</label>
+            <input id="runSearch" class="input" placeholder="e.g. claude, openai/gpt-4o" />
+          </div>
+          <div class="input-group">
+            <label for="pageSize">Page size</label>
+            <select id="pageSize" class="input">
+              <option value="25">25</option>
+              <option value="50" selected>50</option>
+              <option value="100">100</option>
+            </select>
+          </div>
+        </div>
+        <div class="runs-meta">
+          <span id="runsCount">-</span>
+          <div class="pager">
+            <button id="prevPage" class="btn-secondary">Prev</button>
+            <span id="pageInfo">-</span>
+            <button id="nextPage" class="btn-secondary">Next</button>
+          </div>
+        </div>
+        <div id="runsList" class="runs-list"></div>
+        <div id="runDetail" class="run-detail hidden"></div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <span>Read-only data export. No matches can be started from this site.</span>
+    </footer>
+
+    <script type="module" src="app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "benchmark_id": "rps",
+  "name": "Rock Paper Scissors",
+  "description": "LLM models play Rock Paper Scissors with ELO ratings.",
+  "schema_version": 1,
+  "generated_at": "2026-01-14T13:24:55.814Z",
+  "run_types": [
+    "match"
+  ],
+  "metrics": [
+    "elo_rating_bo3",
+    "elo_rating_bo5",
+    "win_rate_bo3",
+    "win_rate_bo5"
+  ],
+  "artifact_kinds": [
+    "match_details"
+  ],
+  "leaderboard_sets": [
+    {
+      "id": "bo3",
+      "label": "Best of 3"
+    },
+    {
+      "id": "bo5",
+      "label": "Best of 5"
+    }
+  ]
+}
