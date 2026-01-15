@@ -1,0 +1,45 @@
+{
+  "run_id": "rps-match-11",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 11,
+    "player1_id": 1,
+    "player2_id": 12,
+    "match_type": "bo3",
+    "status": "error",
+    "winner_id": null,
+    "player1_score": 0,
+    "player2_score": 0,
+    "created_at": "2026-01-14 23:16:52",
+    "completed_at": null,
+    "error_message": "Player 2 (mistral/mistral-medium-latest) failed: API error occurred: Status 429\nBody: {\"object\":\"error\",\"message\":\"Service tier capacity exceeded for this model.\",\"type\":\"service_tier_capacity_exceeded\",\"param\":null,\"code\":\"3505\"}",
+    "player1": {
+      "id": 1,
+      "provider": "google",
+      "model_name": "gemini-3-pro-preview",
+      "display_name": "google/gemini-3-pro-preview"
+    },
+    "player2": {
+      "id": 12,
+      "provider": "mistral",
+      "model_name": "mistral-medium-latest",
+      "display_name": "mistral/mistral-medium-latest"
+    },
+    "winner": null,
+    "rounds": [
+      {
+        "id": 107,
+        "match_id": 11,
+        "round_number": 1,
+        "player1_choice": "rock",
+        "player2_choice": "paper",
+        "winner_id": 12,
+        "player1_context": "This is the first round. No previous moves to analyze.",
+        "player2_context": "This is the first round. No previous moves to analyze.",
+        "player1_response": "rock",
+        "player2_response": "paper",
+        "created_at": "2026-01-14 23:16:57"
+      }
+    ]
+  }
+}
