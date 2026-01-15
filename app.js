@@ -291,7 +291,6 @@ function computeComeback(match, rounds) {
 function computeStats(entries) {
   const modelStats = new Map();
   const longestMatches = [];
-  const comebackMatches = [];
 
   const getModelStats = (player) => {
     const key = player.display_name;
@@ -306,7 +305,8 @@ function computeStats(entries) {
         roundsMatches: 0,
         sweeps20: 0,
         wins20: 0,
-        wins21: 0
+        wins21: 0,
+        comebacks: 0
       });
     }
     return modelStats.get(key);
@@ -361,7 +361,8 @@ function computeStats(entries) {
     if (winnerId && rounds.length) {
       const comeback = computeComeback(match, rounds);
       if (comeback) {
-        comebackMatches.push(comeback);
+        const winnerStats = winnerId === player1.id ? player1Stats : player2Stats;
+        winnerStats.comebacks += 1;
       }
     }
   });
@@ -377,8 +378,7 @@ function computeStats(entries) {
   return {
     totalMatches: entries.length,
     models,
-    longestMatches,
-    comebackMatches
+    longestMatches
   };
 }
 
@@ -477,18 +477,14 @@ function renderStats(stats) {
       value: model.totalMatches
     }));
 
-  const biggestComebacks = stats.comebackMatches
+  const mostComebacks = models
+    .filter((model) => model.comebacks > 0)
     .slice()
-    .sort((a, b) => {
-      if (b.deficit !== a.deficit) {
-        return b.deficit - a.deficit;
-      }
-      return b.rounds - a.rounds;
-    })
+    .sort((a, b) => b.comebacks - a.comebacks)
     .slice(0, 3)
-    .map((match) => ({
-      label: match.label,
-      value: match.value
+    .map((model) => ({
+      label: model.displayName,
+      value: model.comebacks
     }));
 
   statsGrid.innerHTML = [
@@ -498,7 +494,7 @@ function renderStats(stats) {
     renderStatsCard('Most clean 2-0 sweeps', mostSweeps, 'No sweeps yet.'),
     renderStatsCard('Wins that are 2-0', mostWinShare20, 'No wins yet.'),
     renderStatsCard('Wins that are 2-1', mostWinShare21, 'No wins yet.'),
-    renderStatsCard('Biggest comebacks', biggestComebacks, 'No comebacks yet.'),
+    renderStatsCard('Most comebacks', mostComebacks, 'No comebacks yet.'),
     renderStatsCard('Best win rate', bestWinRate, 'No matches yet.'),
     renderStatsCard('Worst win rate', worstWinRate, 'No matches yet.'),
     renderStatsCard('Most matches played', mostMatches, 'No matches yet.')
