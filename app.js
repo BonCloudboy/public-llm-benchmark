@@ -284,7 +284,7 @@ function computeComeback(match, rounds) {
     deficit: maxDeficit,
     rounds: rounds.length,
     label: `${player1Name} vs ${player2Name}`,
-    value: `deficit ${maxDeficit}, final ${finalScore}, winner ${winnerName}`
+    value: `${maxDeficit} deficit → ${winnerName}`
   };
 }
 
@@ -393,7 +393,7 @@ function renderStats(stats) {
     .slice(0, 3)
     .map((model) => ({
       label: model.displayName,
-      value: `${model.avgRounds.toFixed(2)} avg rounds`
+      value: `${model.avgRounds.toFixed(1)} avg`
     }));
 
   const leastAvgRounds = models
@@ -403,7 +403,7 @@ function renderStats(stats) {
     .slice(0, 3)
     .map((model) => ({
       label: model.displayName,
-      value: `${model.avgRounds.toFixed(2)} avg rounds`
+      value: `${model.avgRounds.toFixed(1)} avg`
     }));
 
   const longestGames = stats.longestMatches
@@ -413,15 +413,9 @@ function renderStats(stats) {
     .map(({ match, rounds }) => {
       const player1 = match.player1?.display_name || 'Player 1';
       const player2 = match.player2?.display_name || 'Player 2';
-      const winner =
-        match.winner_id === match.player1?.id
-          ? player1
-          : match.winner_id === match.player2?.id
-            ? player2
-            : 'Draw';
       return {
         label: `${player1} vs ${player2}`,
-        value: `${rounds} rounds, winner ${winner}`
+        value: `${rounds} rounds`
       };
     });
 
@@ -431,7 +425,7 @@ function renderStats(stats) {
     .slice(0, 3)
     .map((model) => ({
       label: model.displayName,
-      value: `${model.sweeps20} sweeps`
+      value: model.sweeps20
     }));
 
   const bestWinRate = models
@@ -441,7 +435,7 @@ function renderStats(stats) {
     .slice(0, 3)
     .map((model) => ({
       label: model.displayName,
-      value: `${(model.winRate * 100).toFixed(1)}% (${model.wins}-${model.losses}-${model.draws})`
+      value: `${(model.winRate * 100).toFixed(0)}%`
     }));
 
   const worstWinRate = models
@@ -451,7 +445,7 @@ function renderStats(stats) {
     .slice(0, 3)
     .map((model) => ({
       label: model.displayName,
-      value: `${(model.winRate * 100).toFixed(1)}% (${model.wins}-${model.losses}-${model.draws})`
+      value: `${(model.winRate * 100).toFixed(0)}%`
     }));
 
   const mostWinShare20 = models
@@ -461,7 +455,7 @@ function renderStats(stats) {
     .slice(0, 3)
     .map((model) => ({
       label: model.displayName,
-      value: `${(model.winShare20 * 100).toFixed(1)}% (${model.wins20}/${model.wins})`
+      value: `${(model.winShare20 * 100).toFixed(0)}%`
     }));
 
   const mostWinShare21 = models
@@ -471,7 +465,7 @@ function renderStats(stats) {
     .slice(0, 3)
     .map((model) => ({
       label: model.displayName,
-      value: `${(model.winShare21 * 100).toFixed(1)}% (${model.wins21}/${model.wins})`
+      value: `${(model.winShare21 * 100).toFixed(0)}%`
     }));
 
   const mostMatches = models
@@ -480,7 +474,7 @@ function renderStats(stats) {
     .slice(0, 3)
     .map((model) => ({
       label: model.displayName,
-      value: `${model.totalMatches} matches`
+      value: model.totalMatches
     }));
 
   const biggestComebacks = stats.comebackMatches
