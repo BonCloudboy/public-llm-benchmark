@@ -1,0 +1,58 @@
+{
+  "run_id": "rps-match-184",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 184,
+    "player1_id": 5,
+    "player2_id": 18,
+    "match_type": "bo3",
+    "status": "error",
+    "winner_id": null,
+    "player1_score": 0,
+    "player2_score": 0,
+    "created_at": "2026-01-15 18:28:38",
+    "completed_at": null,
+    "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+    "player1": {
+      "id": 5,
+      "provider": "openai",
+      "model_name": "gpt-5.2",
+      "display_name": "openai/gpt-5.2"
+    },
+    "player2": {
+      "id": 18,
+      "provider": "mistral",
+      "model_name": "magistral-medium-latest",
+      "display_name": "mistral/magistral-medium-latest"
+    },
+    "winner": null,
+    "rounds": [
+      {
+        "id": 887,
+        "match_id": 184,
+        "round_number": 1,
+        "player1_choice": "paper",
+        "player2_choice": "rock",
+        "winner_id": 5,
+        "player1_context": "This is the first round. No previous moves to analyze.",
+        "player2_context": "This is the first round. No previous moves to analyze.",
+        "player1_response": "paper",
+        "player2_response": "rock",
+        "created_at": "2026-01-15 18:28:47"
+      },
+      {
+        "id": 888,
+        "match_id": 184,
+        "round_number": 3,
+        "player1_choice": "rock",
+        "player2_choice": "paper",
+        "winner_id": 18,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played rock - win\n",
+        "player2_context": "Previous rounds:\nRound 1: You played rock, opponent played paper - loss\n",
+        "player1_response": "rock",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 18:29:30"
+      }
+    ]
+  }
+}

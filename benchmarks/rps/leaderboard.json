@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-15T11:40:10.873Z",
+  "generated_at": "2026-01-15T19:05:57.358Z",
   "sets": [
     {
       "id": "bo3",
@@ -7,42 +7,42 @@
       "entries": [
         {
           "rank": 1,
-          "model_id": 14,
-          "provider": "google",
-          "model_name": "gemini-2.5-pro",
-          "display_name": "google/gemini-2.5-pro",
-          "rating": 1350,
-          "games_played": 12,
-          "wins": 12,
-          "losses": 0,
-          "draws": 0,
-          "win_rate": 100
-        },
-        {
-          "rank": 2,
           "model_id": 16,
           "provider": "deepseek",
           "model_name": "deepseek-reasoner",
           "display_name": "deepseek/deepseek-reasoner",
-          "rating": 1342,
-          "games_played": 17,
-          "wins": 15,
+          "rating": 1357,
+          "games_played": 18,
+          "wins": 16,
           "losses": 2,
           "draws": 0,
-          "win_rate": 88.24
+          "win_rate": 88.89
         },
         {
-          "rank": 3,
+          "rank": 2,
           "model_id": 6,
           "provider": "openai",
           "model_name": "gpt-5",
           "display_name": "openai/gpt-5",
-          "rating": 1317,
-          "games_played": 17,
-          "wins": 14,
+          "rating": 1333,
+          "games_played": 18,
+          "wins": 15,
           "losses": 3,
           "draws": 0,
-          "win_rate": 82.35
+          "win_rate": 83.33
+        },
+        {
+          "rank": 3,
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro",
+          "rating": 1321,
+          "games_played": 18,
+          "wins": 15,
+          "losses": 3,
+          "draws": 0,
+          "win_rate": 83.33
         },
         {
           "rank": 4,
@@ -50,12 +50,12 @@
           "provider": "openai",
           "model_name": "gpt-5.2",
           "display_name": "openai/gpt-5.2",
-          "rating": 1252,
-          "games_played": 17,
-          "wins": 11,
+          "rating": 1266,
+          "games_played": 18,
+          "wins": 12,
           "losses": 6,
           "draws": 0,
-          "win_rate": 64.71
+          "win_rate": 66.67
         },
         {
           "rank": 5,
@@ -72,16 +72,16 @@
         },
         {
           "rank": 6,
-          "model_id": 3,
-          "provider": "anthropic",
-          "model_name": "claude-opus-4-5",
-          "display_name": "anthropic/claude-opus-4-5",
-          "rating": 1236,
-          "games_played": 17,
+          "model_id": 18,
+          "provider": "mistral",
+          "model_name": "magistral-medium-latest",
+          "display_name": "mistral/magistral-medium-latest",
+          "rating": 1230,
+          "games_played": 18,
           "wins": 10,
-          "losses": 7,
+          "losses": 8,
           "draws": 0,
-          "win_rate": 58.82
+          "win_rate": 55.56
         },
         {
           "rank": 7,
@@ -89,20 +89,20 @@
           "provider": "anthropic",
           "model_name": "claude-sonnet-4-5",
           "display_name": "anthropic/claude-sonnet-4-5",
-          "rating": 1222,
-          "games_played": 15,
-          "wins": 8,
-          "losses": 7,
+          "rating": 1226,
+          "games_played": 18,
+          "wins": 10,
+          "losses": 8,
           "draws": 0,
-          "win_rate": 53.33
+          "win_rate": 55.56
         },
         {
           "rank": 8,
-          "model_id": 19,
-          "provider": "mistral",
-          "model_name": "magistral-small-latest",
-          "display_name": "mistral/magistral-small-latest",
-          "rating": 1220,
+          "model_id": 3,
+          "provider": "anthropic",
+          "model_name": "claude-opus-4-5",
+          "display_name": "anthropic/claude-opus-4-5",
+          "rating": 1219,
           "games_played": 18,
           "wins": 10,
           "losses": 8,
@@ -111,16 +111,16 @@
         },
         {
           "rank": 9,
-          "model_id": 13,
-          "provider": "google",
-          "model_name": "gemini-3-flash-preview",
-          "display_name": "google/gemini-3-flash-preview",
-          "rating": 1210,
-          "games_played": 17,
-          "wins": 9,
+          "model_id": 19,
+          "provider": "mistral",
+          "model_name": "magistral-small-latest",
+          "display_name": "mistral/magistral-small-latest",
+          "rating": 1219,
+          "games_played": 18,
+          "wins": 10,
           "losses": 8,
           "draws": 0,
-          "win_rate": 52.94
+          "win_rate": 55.56
         },
         {
           "rank": 10,
@@ -128,7 +128,7 @@
           "provider": "google",
           "model_name": "gemini-2.5-flash-lite",
           "display_name": "google/gemini-2.5-flash-lite",
-          "rating": 1200,
+          "rating": 1199,
           "games_played": 18,
           "wins": 9,
           "losses": 9,
@@ -137,84 +137,45 @@
         },
         {
           "rank": 11,
-          "model_id": 8,
-          "provider": "openai",
-          "model_name": "gpt-5-nano",
-          "display_name": "openai/gpt-5-nano",
-          "rating": 1199,
-          "games_played": 2,
-          "wins": 1,
-          "losses": 1,
+          "model_id": 13,
+          "provider": "google",
+          "model_name": "gemini-3-flash-preview",
+          "display_name": "google/gemini-3-flash-preview",
+          "rating": 1192,
+          "games_played": 18,
+          "wins": 9,
+          "losses": 9,
           "draws": 0,
           "win_rate": 50
         },
         {
           "rank": 12,
-          "model_id": 20,
-          "provider": "google",
-          "model_name": "gemini-2.5-flash",
-          "display_name": "google/gemini-2.5-flash",
-          "rating": 1190,
-          "games_played": 16,
-          "wins": 7,
-          "losses": 9,
-          "draws": 0,
-          "win_rate": 43.75
-        },
-        {
-          "rank": 13,
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest",
-          "rating": 1184,
-          "games_played": 11,
-          "wins": 5,
-          "losses": 6,
-          "draws": 0,
-          "win_rate": 45.45
-        },
-        {
-          "rank": 14,
           "model_id": 12,
           "provider": "mistral",
           "model_name": "mistral-medium-latest",
           "display_name": "mistral/mistral-medium-latest",
-          "rating": 1167,
-          "games_played": 16,
-          "wins": 7,
-          "losses": 9,
-          "draws": 0,
-          "win_rate": 43.75
-        },
-        {
-          "rank": 15,
-          "model_id": 9,
-          "provider": "openai",
-          "model_name": "gpt-4.1",
-          "display_name": "openai/gpt-4.1",
-          "rating": 1166,
-          "games_played": 2,
-          "wins": 0,
-          "losses": 2,
-          "draws": 0,
-          "win_rate": 0
-        },
-        {
-          "rank": 16,
-          "model_id": 11,
-          "provider": "mistral",
-          "model_name": "mistral-large-latest",
-          "display_name": "mistral/mistral-large-latest",
-          "rating": 1143,
-          "games_played": 16,
-          "wins": 6,
+          "rating": 1175,
+          "games_played": 18,
+          "wins": 8,
           "losses": 10,
           "draws": 0,
-          "win_rate": 37.5
+          "win_rate": 44.44
         },
         {
-          "rank": 17,
+          "rank": 13,
+          "model_id": 20,
+          "provider": "google",
+          "model_name": "gemini-2.5-flash",
+          "display_name": "google/gemini-2.5-flash",
+          "rating": 1164,
+          "games_played": 18,
+          "wins": 7,
+          "losses": 11,
+          "draws": 0,
+          "win_rate": 38.89
+        },
+        {
+          "rank": 14,
           "model_id": 4,
           "provider": "anthropic",
           "model_name": "claude-haiku-4-5",
@@ -227,51 +188,64 @@
           "win_rate": 33.33
         },
         {
+          "rank": 15,
+          "model_id": 11,
+          "provider": "mistral",
+          "model_name": "mistral-large-latest",
+          "display_name": "mistral/mistral-large-latest",
+          "rating": 1118,
+          "games_played": 18,
+          "wins": 6,
+          "losses": 12,
+          "draws": 0,
+          "win_rate": 33.33
+        },
+        {
+          "rank": 16,
+          "model_id": 17,
+          "provider": "mistral",
+          "model_name": "mistral-small-latest",
+          "display_name": "mistral/mistral-small-latest",
+          "rating": 1108,
+          "games_played": 18,
+          "wins": 4,
+          "losses": 14,
+          "draws": 0,
+          "win_rate": 22.22
+        },
+        {
+          "rank": 17,
+          "model_id": 10,
+          "provider": "openai",
+          "model_name": "gpt-4o",
+          "display_name": "openai/gpt-4o",
+          "rating": 1105,
+          "games_played": 18,
+          "wins": 6,
+          "losses": 12,
+          "draws": 0,
+          "win_rate": 33.33
+        },
+        {
           "rank": 18,
           "model_id": 1,
           "provider": "google",
           "model_name": "gemini-3-pro-preview",
           "display_name": "google/gemini-3-pro-preview",
-          "rating": 1119,
-          "games_played": 20,
-          "wins": 6,
+          "rating": 1098,
+          "games_played": 18,
+          "wins": 4,
           "losses": 14,
           "draws": 0,
-          "win_rate": 30
+          "win_rate": 22.22
         },
         {
           "rank": 19,
-          "model_id": 10,
-          "provider": "openai",
-          "model_name": "gpt-4o",
-          "display_name": "openai/gpt-4o",
-          "rating": 1118,
-          "games_played": 19,
-          "wins": 7,
-          "losses": 12,
-          "draws": 0,
-          "win_rate": 36.84
-        },
-        {
-          "rank": 20,
-          "model_id": 17,
-          "provider": "mistral",
-          "model_name": "mistral-small-latest",
-          "display_name": "mistral/mistral-small-latest",
-          "rating": 1094,
-          "games_played": 16,
-          "wins": 3,
-          "losses": 13,
-          "draws": 0,
-          "win_rate": 18.75
-        },
-        {
-          "rank": 21,
           "model_id": 15,
           "provider": "deepseek",
           "model_name": "deepseek-chat",
           "display_name": "deepseek/deepseek-chat",
-          "rating": 1090,
+          "rating": 1089,
           "games_played": 18,
           "wins": 3,
           "losses": 15,
@@ -377,32 +351,6 @@
         },
         {
           "rank": 8,
-          "model_id": 8,
-          "provider": "openai",
-          "model_name": "gpt-5-nano",
-          "display_name": "openai/gpt-5-nano",
-          "rating": 1200,
-          "games_played": 0,
-          "wins": 0,
-          "losses": 0,
-          "draws": 0,
-          "win_rate": 0
-        },
-        {
-          "rank": 9,
-          "model_id": 9,
-          "provider": "openai",
-          "model_name": "gpt-4.1",
-          "display_name": "openai/gpt-4.1",
-          "rating": 1200,
-          "games_played": 0,
-          "wins": 0,
-          "losses": 0,
-          "draws": 0,
-          "win_rate": 0
-        },
-        {
-          "rank": 10,
           "model_id": 10,
           "provider": "openai",
           "model_name": "gpt-4o",
@@ -415,7 +363,7 @@
           "win_rate": 0
         },
         {
-          "rank": 11,
+          "rank": 9,
           "model_id": 11,
           "provider": "mistral",
           "model_name": "mistral-large-latest",
@@ -428,7 +376,7 @@
           "win_rate": 0
         },
         {
-          "rank": 12,
+          "rank": 10,
           "model_id": 12,
           "provider": "mistral",
           "model_name": "mistral-medium-latest",
@@ -441,7 +389,7 @@
           "win_rate": 0
         },
         {
-          "rank": 13,
+          "rank": 11,
           "model_id": 13,
           "provider": "google",
           "model_name": "gemini-3-flash-preview",
@@ -454,7 +402,7 @@
           "win_rate": 0
         },
         {
-          "rank": 14,
+          "rank": 12,
           "model_id": 14,
           "provider": "google",
           "model_name": "gemini-2.5-pro",
@@ -467,7 +415,7 @@
           "win_rate": 0
         },
         {
-          "rank": 15,
+          "rank": 13,
           "model_id": 15,
           "provider": "deepseek",
           "model_name": "deepseek-chat",
@@ -480,7 +428,7 @@
           "win_rate": 0
         },
         {
-          "rank": 16,
+          "rank": 14,
           "model_id": 16,
           "provider": "deepseek",
           "model_name": "deepseek-reasoner",
@@ -493,7 +441,7 @@
           "win_rate": 0
         },
         {
-          "rank": 17,
+          "rank": 15,
           "model_id": 17,
           "provider": "mistral",
           "model_name": "mistral-small-latest",
@@ -506,7 +454,7 @@
           "win_rate": 0
         },
         {
-          "rank": 18,
+          "rank": 16,
           "model_id": 18,
           "provider": "mistral",
           "model_name": "magistral-medium-latest",
@@ -519,7 +467,7 @@
           "win_rate": 0
         },
         {
-          "rank": 19,
+          "rank": 17,
           "model_id": 19,
           "provider": "mistral",
           "model_name": "magistral-small-latest",
@@ -532,7 +480,7 @@
           "win_rate": 0
         },
         {
-          "rank": 20,
+          "rank": 18,
           "model_id": 20,
           "provider": "google",
           "model_name": "gemini-2.5-flash",
@@ -545,7 +493,7 @@
           "win_rate": 0
         },
         {
-          "rank": 21,
+          "rank": 19,
           "model_id": 21,
           "provider": "google",
           "model_name": "gemini-2.5-flash-lite",

@@ -3,7 +3,7 @@
   "name": "Rock Paper Scissors",
   "description": "LLM models play Rock Paper Scissors with ELO ratings.",
   "schema_version": 1,
-  "generated_at": "2026-01-15T11:40:10.873Z",
+  "generated_at": "2026-01-15T19:05:57.358Z",
   "run_types": [
     "match"
   ],

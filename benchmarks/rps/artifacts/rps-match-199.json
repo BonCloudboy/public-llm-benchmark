@@ -1,0 +1,45 @@
+{
+  "run_id": "rps-match-199",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 199,
+    "player1_id": 14,
+    "player2_id": 16,
+    "match_type": "bo3",
+    "status": "error",
+    "winner_id": null,
+    "player1_score": 0,
+    "player2_score": 0,
+    "created_at": "2026-01-15 18:50:04",
+    "completed_at": null,
+    "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+    "player1": {
+      "id": 14,
+      "provider": "google",
+      "model_name": "gemini-2.5-pro",
+      "display_name": "google/gemini-2.5-pro"
+    },
+    "player2": {
+      "id": 16,
+      "provider": "deepseek",
+      "model_name": "deepseek-reasoner",
+      "display_name": "deepseek/deepseek-reasoner"
+    },
+    "winner": null,
+    "rounds": [
+      {
+        "id": 926,
+        "match_id": 199,
+        "round_number": 1,
+        "player1_choice": "paper",
+        "player2_choice": "paper",
+        "winner_id": null,
+        "player1_context": "This is the first round. No previous moves to analyze.",
+        "player2_context": "This is the first round. No previous moves to analyze.",
+        "player1_response": "paper",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 18:50:19"
+      }
+    ]
+  }
+}
