@@ -125,6 +125,11 @@ h5 {
   gap: 16px;
 }
 
+.status-text {
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
 .meta-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
@@ -299,6 +304,62 @@ th {
   border-radius: 0;
   background: var(--paper-strong);
   border: 1px solid var(--line);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+  margin-top: 16px;
+}
+
+.stats-card {
+  border: 1px solid var(--line);
+  background: var(--paper-strong);
+  padding: 16px;
+}
+
+.stats-card h3 {
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.75rem;
+  color: var(--muted);
+}
+
+.stats-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.stats-row {
+  display: grid;
+  grid-template-columns: 32px 1fr auto;
+  gap: 8px;
+  align-items: baseline;
+}
+
+.stat-rank {
+  color: var(--subtle);
+  font-weight: 600;
+}
+
+.stat-label {
+  font-weight: 500;
+}
+
+.stat-value {
+  color: var(--muted);
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+.stat-empty {
+  color: var(--muted);
+  font-size: 0.85rem;
 }
 
 .error {

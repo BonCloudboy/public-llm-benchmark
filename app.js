@@ -14,6 +14,8 @@ const runsCount = document.getElementById('runsCount');
 const prevPageButton = document.getElementById('prevPage');
 const nextPageButton = document.getElementById('nextPage');
 const pageInfo = document.getElementById('pageInfo');
+const statsGrid = document.getElementById('statsGrid');
+const statsStatus = document.getElementById('statsStatus');
 
 const dataBase = 'benchmarks';
 let benchmarks = [];
@@ -24,6 +26,7 @@ let activeLeaderboardId = null;
 let runsData = [];
 let pageSize = 50;
 let currentPage = 1;
+let statsRequestId = 0;
 
 function formatDate(value) {
   if (!value) return '-';
@@ -43,6 +46,11 @@ function setStatus(message) {
 function clearRunDetail() {
   runDetail.innerHTML = '';
   runDetail.classList.add('hidden');
+}
+
+function setStatsStatus(message) {
+  if (!statsStatus) return;
+  statsStatus.textContent = message;
 }
 
 function renderLeaderboard(setId) {
@@ -216,6 +224,330 @@ async function loadRunDetail(artifactPath) {
   }
 }
 
+function renderStatsCard(title, items, emptyMessage) {
+  const rows = items.length
+    ? items
+        .map(
+          (item, index) => `
+            <li class="stats-row">
+              <span class="stat-rank">#${index + 1}</span>
+              <span class="stat-label">${item.label}</span>
+              <span class="stat-value">${item.value}</span>
+            </li>
+          `
+        )
+        .join('')
+    : `<li class="stat-empty">${emptyMessage}</li>`;
+
+  return `
+    <div class="stats-card">
+      <h3>${title}</h3>
+      <ol class="stats-list">
+        ${rows}
+      </ol>
+    </div>
+  `;
+}
+
+function computeComeback(match, rounds) {
+  const winnerId = match.winner_id;
+  const player1Id = match.player1?.id;
+  const player2Id = match.player2?.id;
+  if (!winnerId || !player1Id || !player2Id) return null;
+
+  let player1Score = 0;
+  let player2Score = 0;
+  let maxDeficit = 0;
+
+  rounds.forEach((round) => {
+    if (round.winner_id === player1Id) {
+      player1Score += 1;
+    } else if (round.winner_id === player2Id) {
+      player2Score += 1;
+    }
+
+    const deficit =
+      winnerId === player1Id ? player2Score - player1Score : player1Score - player2Score;
+    if (deficit > maxDeficit) {
+      maxDeficit = deficit;
+    }
+  });
+
+  if (maxDeficit <= 0) return null;
+
+  const player1Name = match.player1?.display_name || 'Player 1';
+  const player2Name = match.player2?.display_name || 'Player 2';
+  const winnerName = winnerId === player1Id ? player1Name : player2Name;
+  const finalScore = `${match.player1_score ?? 0}-${match.player2_score ?? 0}`;
+
+  return {
+    deficit: maxDeficit,
+    rounds: rounds.length,
+    label: `${player1Name} vs ${player2Name}`,
+    value: `deficit ${maxDeficit}, final ${finalScore}, winner ${winnerName}`
+  };
+}
+
+function computeStats(entries) {
+  const modelStats = new Map();
+  const longestMatches = [];
+  const comebackMatches = [];
+
+  const getModelStats = (player) => {
+    const key = player.display_name;
+    if (!modelStats.has(key)) {
+      modelStats.set(key, {
+        displayName: key,
+        totalMatches: 0,
+        wins: 0,
+        losses: 0,
+        draws: 0,
+        totalRounds: 0,
+        roundsMatches: 0,
+        sweeps20: 0,
+        wins20: 0,
+        wins21: 0
+      });
+    }
+    return modelStats.get(key);
+  };
+
+  entries.forEach(({ match }) => {
+    if (!match?.player1 || !match?.player2) return;
+    const player1 = match.player1;
+    const player2 = match.player2;
+    const player1Stats = getModelStats(player1);
+    const player2Stats = getModelStats(player2);
+
+    player1Stats.totalMatches += 1;
+    player2Stats.totalMatches += 1;
+
+    const rounds = Array.isArray(match.rounds) ? match.rounds : [];
+    if (rounds.length) {
+      player1Stats.totalRounds += rounds.length;
+      player2Stats.totalRounds += rounds.length;
+      player1Stats.roundsMatches += 1;
+      player2Stats.roundsMatches += 1;
+      longestMatches.push({ match, rounds: rounds.length });
+    }
+
+    const winnerId = match.winner_id;
+    if (!winnerId) {
+      player1Stats.draws += 1;
+      player2Stats.draws += 1;
+    } else if (winnerId === player1.id) {
+      player1Stats.wins += 1;
+      player2Stats.losses += 1;
+    } else if (winnerId === player2.id) {
+      player2Stats.wins += 1;
+      player1Stats.losses += 1;
+    }
+
+    const player1Score = match.player1_score ?? 0;
+    const player2Score = match.player2_score ?? 0;
+    if (winnerId) {
+      const winnerStats = winnerId === player1.id ? player1Stats : player2Stats;
+      const winnerScore = winnerId === player1.id ? player1Score : player2Score;
+      const loserScore = winnerId === player1.id ? player2Score : player1Score;
+
+      if (winnerScore === 2 && loserScore === 0) {
+        winnerStats.sweeps20 += 1;
+        winnerStats.wins20 += 1;
+      } else if (winnerScore === 2 && loserScore === 1) {
+        winnerStats.wins21 += 1;
+      }
+    }
+
+    if (winnerId && rounds.length) {
+      const comeback = computeComeback(match, rounds);
+      if (comeback) {
+        comebackMatches.push(comeback);
+      }
+    }
+  });
+
+  const models = Array.from(modelStats.values()).map((stats) => ({
+    ...stats,
+    avgRounds: stats.roundsMatches ? stats.totalRounds / stats.roundsMatches : 0,
+    winRate: stats.totalMatches ? stats.wins / stats.totalMatches : 0,
+    winShare20: stats.wins ? stats.wins20 / stats.wins : 0,
+    winShare21: stats.wins ? stats.wins21 / stats.wins : 0
+  }));
+
+  return {
+    totalMatches: entries.length,
+    models,
+    longestMatches,
+    comebackMatches
+  };
+}
+
+function renderStats(stats) {
+  if (!statsGrid) return;
+  const models = stats.models;
+
+  const mostAvgRounds = models
+    .filter((model) => model.roundsMatches > 0)
+    .slice()
+    .sort((a, b) => b.avgRounds - a.avgRounds)
+    .slice(0, 3)
+    .map((model) => ({
+      label: model.displayName,
+      value: `${model.avgRounds.toFixed(2)} avg rounds`
+    }));
+
+  const leastAvgRounds = models
+    .filter((model) => model.roundsMatches > 0)
+    .slice()
+    .sort((a, b) => a.avgRounds - b.avgRounds)
+    .slice(0, 3)
+    .map((model) => ({
+      label: model.displayName,
+      value: `${model.avgRounds.toFixed(2)} avg rounds`
+    }));
+
+  const longestGames = stats.longestMatches
+    .slice()
+    .sort((a, b) => b.rounds - a.rounds)
+    .slice(0, 3)
+    .map(({ match, rounds }) => {
+      const player1 = match.player1?.display_name || 'Player 1';
+      const player2 = match.player2?.display_name || 'Player 2';
+      const winner =
+        match.winner_id === match.player1?.id
+          ? player1
+          : match.winner_id === match.player2?.id
+            ? player2
+            : 'Draw';
+      return {
+        label: `${player1} vs ${player2}`,
+        value: `${rounds} rounds, winner ${winner}`
+      };
+    });
+
+  const mostSweeps = models
+    .slice()
+    .sort((a, b) => b.sweeps20 - a.sweeps20)
+    .slice(0, 3)
+    .map((model) => ({
+      label: model.displayName,
+      value: `${model.sweeps20} sweeps`
+    }));
+
+  const bestWinRate = models
+    .filter((model) => model.totalMatches > 0)
+    .slice()
+    .sort((a, b) => b.winRate - a.winRate)
+    .slice(0, 3)
+    .map((model) => ({
+      label: model.displayName,
+      value: `${(model.winRate * 100).toFixed(1)}% (${model.wins}-${model.losses}-${model.draws})`
+    }));
+
+  const worstWinRate = models
+    .filter((model) => model.totalMatches > 0)
+    .slice()
+    .sort((a, b) => a.winRate - b.winRate)
+    .slice(0, 3)
+    .map((model) => ({
+      label: model.displayName,
+      value: `${(model.winRate * 100).toFixed(1)}% (${model.wins}-${model.losses}-${model.draws})`
+    }));
+
+  const mostWinShare20 = models
+    .filter((model) => model.wins > 0)
+    .slice()
+    .sort((a, b) => b.winShare20 - a.winShare20)
+    .slice(0, 3)
+    .map((model) => ({
+      label: model.displayName,
+      value: `${(model.winShare20 * 100).toFixed(1)}% (${model.wins20}/${model.wins})`
+    }));
+
+  const mostWinShare21 = models
+    .filter((model) => model.wins > 0)
+    .slice()
+    .sort((a, b) => b.winShare21 - a.winShare21)
+    .slice(0, 3)
+    .map((model) => ({
+      label: model.displayName,
+      value: `${(model.winShare21 * 100).toFixed(1)}% (${model.wins21}/${model.wins})`
+    }));
+
+  const mostMatches = models
+    .slice()
+    .sort((a, b) => b.totalMatches - a.totalMatches)
+    .slice(0, 3)
+    .map((model) => ({
+      label: model.displayName,
+      value: `${model.totalMatches} matches`
+    }));
+
+  const biggestComebacks = stats.comebackMatches
+    .slice()
+    .sort((a, b) => {
+      if (b.deficit !== a.deficit) {
+        return b.deficit - a.deficit;
+      }
+      return b.rounds - a.rounds;
+    })
+    .slice(0, 3)
+    .map((match) => ({
+      label: match.label,
+      value: match.value
+    }));
+
+  statsGrid.innerHTML = [
+    renderStatsCard('Most average rounds', mostAvgRounds, 'No round data yet.'),
+    renderStatsCard('Least average rounds', leastAvgRounds, 'No round data yet.'),
+    renderStatsCard('Longest games', longestGames, 'No completed matches yet.'),
+    renderStatsCard('Most clean 2-0 sweeps', mostSweeps, 'No sweeps yet.'),
+    renderStatsCard('Wins that are 2-0', mostWinShare20, 'No wins yet.'),
+    renderStatsCard('Wins that are 2-1', mostWinShare21, 'No wins yet.'),
+    renderStatsCard('Biggest comebacks', biggestComebacks, 'No comebacks yet.'),
+    renderStatsCard('Best win rate', bestWinRate, 'No matches yet.'),
+    renderStatsCard('Worst win rate', worstWinRate, 'No matches yet.'),
+    renderStatsCard('Most matches played', mostMatches, 'No matches yet.')
+  ].join('');
+}
+
+async function loadStats(benchmarkPath, runs) {
+  if (!statsGrid || !statsStatus) return;
+  const requestId = ++statsRequestId;
+  statsGrid.innerHTML = '';
+  setStatsStatus('Loading stats...');
+
+  const completedRuns = runs.filter((run) => run.status === 'completed' && run.artifacts_ref);
+  if (!completedRuns.length) {
+    setStatsStatus('No completed runs yet.');
+    return;
+  }
+
+  const artifactPromises = completedRuns.map(async (run) => {
+    try {
+      const response = await fetch(`${benchmarkPath}/${run.artifacts_ref}`);
+      if (!response.ok) return null;
+      const artifact = await response.json();
+      return { run, match: artifact.match || null };
+    } catch (error) {
+      return null;
+    }
+  });
+
+  const artifacts = await Promise.all(artifactPromises);
+  if (requestId !== statsRequestId) return;
+  const entries = artifacts.filter((entry) => entry && entry.match);
+
+  if (!entries.length) {
+    setStatsStatus('No stats available.');
+    return;
+  }
+
+  const stats = computeStats(entries);
+  renderStats(stats);
+  setStatsStatus(`Stats based on ${stats.totalMatches} matches.`);
+}
+
 async function loadBenchmark(benchmark) {
   if (!benchmark) return;
   currentBenchmark = benchmark;
@@ -255,10 +587,12 @@ async function loadBenchmark(benchmark) {
     }
     currentPage = 1;
     updateRunsView(benchmarkPath);
+    await loadStats(benchmarkPath, runsData);
   } catch (error) {
     setStatus('Failed to load benchmark.');
     leaderboardTables.innerHTML = '<p>Unable to load leaderboard.</p>';
     runsList.innerHTML = '<p>Unable to load runs.</p>';
+    setStatsStatus('Unable to load stats.');
   }
 }
 

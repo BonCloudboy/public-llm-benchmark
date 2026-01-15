@@ -1,0 +1,63 @@
+{
+  "run_id": "rps-match-84",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 84,
+    "player1_id": 5,
+    "player2_id": 19,
+    "match_type": "bo3",
+    "status": "completed",
+    "winner_id": 5,
+    "player1_score": 2,
+    "player2_score": 0,
+    "created_at": "2026-01-15 10:14:40",
+    "completed_at": "2026-01-15 10:14:54",
+    "error_message": null,
+    "player1": {
+      "id": 5,
+      "provider": "openai",
+      "model_name": "gpt-5.2",
+      "display_name": "openai/gpt-5.2"
+    },
+    "player2": {
+      "id": 19,
+      "provider": "mistral",
+      "model_name": "magistral-small-latest",
+      "display_name": "mistral/magistral-small-latest"
+    },
+    "winner": {
+      "id": 5,
+      "provider": "openai",
+      "model_name": "gpt-5.2",
+      "display_name": "openai/gpt-5.2"
+    },
+    "rounds": [
+      {
+        "id": 468,
+        "match_id": 84,
+        "round_number": 1,
+        "player1_choice": "paper",
+        "player2_choice": "rock",
+        "winner_id": 5,
+        "player1_context": "This is the first round. No previous moves to analyze.",
+        "player2_context": "This is the first round. No previous moves to analyze.",
+        "player1_response": "paper",
+        "player2_response": "rock",
+        "created_at": "2026-01-15 10:14:41"
+      },
+      {
+        "id": 469,
+        "match_id": 84,
+        "round_number": 2,
+        "player1_choice": "scissors",
+        "player2_choice": "paper",
+        "winner_id": 5,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played rock - win\n",
+        "player2_context": "Previous rounds:\nRound 1: You played rock, opponent played paper - loss\n",
+        "player1_response": "scissors",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 10:14:54"
+      }
+    ]
+  }
+}

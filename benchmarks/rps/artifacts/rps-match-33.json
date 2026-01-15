@@ -1,0 +1,102 @@
+{
+  "run_id": "rps-match-33",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 33,
+    "player1_id": 2,
+    "player2_id": 3,
+    "match_type": "bo3",
+    "status": "completed",
+    "winner_id": 3,
+    "player1_score": 1,
+    "player2_score": 2,
+    "created_at": "2026-01-15 09:39:35",
+    "completed_at": "2026-01-15 09:39:54",
+    "error_message": null,
+    "player1": {
+      "id": 2,
+      "provider": "anthropic",
+      "model_name": "claude-sonnet-4-5",
+      "display_name": "anthropic/claude-sonnet-4-5"
+    },
+    "player2": {
+      "id": 3,
+      "provider": "anthropic",
+      "model_name": "claude-opus-4-5",
+      "display_name": "anthropic/claude-opus-4-5"
+    },
+    "winner": {
+      "id": 3,
+      "provider": "anthropic",
+      "model_name": "claude-opus-4-5",
+      "display_name": "anthropic/claude-opus-4-5"
+    },
+    "rounds": [
+      {
+        "id": 220,
+        "match_id": 33,
+        "round_number": 1,
+        "player1_choice": "scissors",
+        "player2_choice": "rock",
+        "winner_id": 3,
+        "player1_context": "This is the first round. No previous moves to analyze.",
+        "player2_context": "This is the first round. No previous moves to analyze.",
+        "player1_response": "scissors",
+        "player2_response": "rock",
+        "created_at": "2026-01-15 09:39:39"
+      },
+      {
+        "id": 221,
+        "match_id": 33,
+        "round_number": 2,
+        "player1_choice": "paper",
+        "player2_choice": "rock",
+        "winner_id": 2,
+        "player1_context": "Previous rounds:\nRound 1: You played scissors, opponent played rock - loss\n",
+        "player2_context": "Previous rounds:\nRound 1: You played rock, opponent played scissors - win\n",
+        "player1_response": "paper",
+        "player2_response": "rock",
+        "created_at": "2026-01-15 09:39:43"
+      },
+      {
+        "id": 222,
+        "match_id": 33,
+        "round_number": 3,
+        "player1_choice": "paper",
+        "player2_choice": "paper",
+        "winner_id": null,
+        "player1_context": "Previous rounds:\nRound 1: You played scissors, opponent played rock - loss\nRound 2: You played paper, opponent played rock - win\n",
+        "player2_context": "Previous rounds:\nRound 1: You played rock, opponent played scissors - win\nRound 2: You played rock, opponent played paper - loss\n",
+        "player1_response": "paper",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 09:39:47"
+      },
+      {
+        "id": 223,
+        "match_id": 33,
+        "round_number": 4,
+        "player1_choice": "scissors",
+        "player2_choice": "scissors",
+        "winner_id": null,
+        "player1_context": "Previous rounds:\nRound 1: You played scissors, opponent played rock - loss\nRound 2: You played paper, opponent played rock - win\nRound 3: You played paper, opponent played paper - draw\n",
+        "player2_context": "Previous rounds:\nRound 1: You played rock, opponent played scissors - win\nRound 2: You played rock, opponent played paper - loss\nRound 3: You played paper, opponent played paper - draw\n",
+        "player1_response": "scissors",
+        "player2_response": "scissors",
+        "created_at": "2026-01-15 09:39:51"
+      },
+      {
+        "id": 224,
+        "match_id": 33,
+        "round_number": 5,
+        "player1_choice": "rock",
+        "player2_choice": "paper",
+        "winner_id": 3,
+        "player1_context": "Previous rounds:\nRound 1: You played scissors, opponent played rock - loss\nRound 2: You played paper, opponent played rock - win\nRound 3: You played paper, opponent played paper - draw\nRound 4: You played scissors, opponent played scissors - draw\n",
+        "player2_context": "Previous rounds:\nRound 1: You played rock, opponent played scissors - win\nRound 2: You played rock, opponent played paper - loss\nRound 3: You played paper, opponent played paper - draw\nRound 4: You played scissors, opponent played scissors - draw\n",
+        "player1_response": "rock",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 09:39:54"
+      }
+    ]
+  }
+}

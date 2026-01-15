@@ -1,0 +1,102 @@
+{
+  "run_id": "rps-match-141",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 141,
+    "player1_id": 12,
+    "player2_id": 16,
+    "match_type": "bo3",
+    "status": "completed",
+    "winner_id": 16,
+    "player1_score": 1,
+    "player2_score": 2,
+    "created_at": "2026-01-15 10:51:14",
+    "completed_at": "2026-01-15 10:56:11",
+    "error_message": null,
+    "player1": {
+      "id": 12,
+      "provider": "mistral",
+      "model_name": "mistral-medium-latest",
+      "display_name": "mistral/mistral-medium-latest"
+    },
+    "player2": {
+      "id": 16,
+      "provider": "deepseek",
+      "model_name": "deepseek-reasoner",
+      "display_name": "deepseek/deepseek-reasoner"
+    },
+    "winner": {
+      "id": 16,
+      "provider": "deepseek",
+      "model_name": "deepseek-reasoner",
+      "display_name": "deepseek/deepseek-reasoner"
+    },
+    "rounds": [
+      {
+        "id": 721,
+        "match_id": 141,
+        "round_number": 1,
+        "player1_choice": "paper",
+        "player2_choice": "paper",
+        "winner_id": null,
+        "player1_context": "This is the first round. No previous moves to analyze.",
+        "player2_context": "This is the first round. No previous moves to analyze.",
+        "player1_response": "paper",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 10:51:26"
+      },
+      {
+        "id": 722,
+        "match_id": 141,
+        "round_number": 2,
+        "player1_choice": "scissors",
+        "player2_choice": "rock",
+        "winner_id": 16,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\n",
+        "player1_response": "scissors",
+        "player2_response": "rock",
+        "created_at": "2026-01-15 10:52:02"
+      },
+      {
+        "id": 723,
+        "match_id": 141,
+        "round_number": 3,
+        "player1_choice": "rock",
+        "player2_choice": "scissors",
+        "winner_id": 12,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played rock - loss\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played rock, opponent played scissors - win\n",
+        "player1_response": "rock",
+        "player2_response": "scissors",
+        "created_at": "2026-01-15 10:53:13"
+      },
+      {
+        "id": 724,
+        "match_id": 141,
+        "round_number": 4,
+        "player1_choice": "scissors",
+        "player2_choice": "scissors",
+        "winner_id": null,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played rock - loss\nRound 3: You played rock, opponent played scissors - win\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played rock, opponent played scissors - win\nRound 3: You played scissors, opponent played rock - loss\n",
+        "player1_response": "scissors",
+        "player2_response": "scissors",
+        "created_at": "2026-01-15 10:54:05"
+      },
+      {
+        "id": 725,
+        "match_id": 141,
+        "round_number": 5,
+        "player1_choice": "rock",
+        "player2_choice": "paper",
+        "winner_id": 16,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played rock - loss\nRound 3: You played rock, opponent played scissors - win\nRound 4: You played scissors, opponent played scissors - draw\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played rock, opponent played scissors - win\nRound 3: You played scissors, opponent played rock - loss\nRound 4: You played scissors, opponent played scissors - draw\n",
+        "player1_response": "rock",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 10:56:11"
+      }
+    ]
+  }
+}

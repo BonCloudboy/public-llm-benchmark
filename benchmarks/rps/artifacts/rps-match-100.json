@@ -1,0 +1,102 @@
+{
+  "run_id": "rps-match-100",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 100,
+    "player1_id": 6,
+    "player2_id": 21,
+    "match_type": "bo3",
+    "status": "completed",
+    "winner_id": 6,
+    "player1_score": 2,
+    "player2_score": 1,
+    "created_at": "2026-01-15 10:24:30",
+    "completed_at": "2026-01-15 10:24:57",
+    "error_message": null,
+    "player1": {
+      "id": 6,
+      "provider": "openai",
+      "model_name": "gpt-5",
+      "display_name": "openai/gpt-5"
+    },
+    "player2": {
+      "id": 21,
+      "provider": "google",
+      "model_name": "gemini-2.5-flash-lite",
+      "display_name": "google/gemini-2.5-flash-lite"
+    },
+    "winner": {
+      "id": 6,
+      "provider": "openai",
+      "model_name": "gpt-5",
+      "display_name": "openai/gpt-5"
+    },
+    "rounds": [
+      {
+        "id": 520,
+        "match_id": 100,
+        "round_number": 1,
+        "player1_choice": "paper",
+        "player2_choice": "paper",
+        "winner_id": null,
+        "player1_context": "This is the first round. No previous moves to analyze.",
+        "player2_context": "This is the first round. No previous moves to analyze.",
+        "player1_response": "paper",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 10:24:33"
+      },
+      {
+        "id": 521,
+        "match_id": 100,
+        "round_number": 2,
+        "player1_choice": "scissors",
+        "player2_choice": "paper",
+        "winner_id": 6,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\n",
+        "player1_response": "scissors",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 10:24:39"
+      },
+      {
+        "id": 522,
+        "match_id": 100,
+        "round_number": 3,
+        "player1_choice": "scissors",
+        "player2_choice": "rock",
+        "winner_id": 21,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played paper - win\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played paper, opponent played scissors - loss\n",
+        "player1_response": "scissors",
+        "player2_response": "rock",
+        "created_at": "2026-01-15 10:24:43"
+      },
+      {
+        "id": 523,
+        "match_id": 100,
+        "round_number": 4,
+        "player1_choice": "paper",
+        "player2_choice": "paper",
+        "winner_id": null,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played paper - win\nRound 3: You played scissors, opponent played rock - loss\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played paper, opponent played scissors - loss\nRound 3: You played rock, opponent played scissors - win\n",
+        "player1_response": "paper",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 10:24:53"
+      },
+      {
+        "id": 524,
+        "match_id": 100,
+        "round_number": 5,
+        "player1_choice": "scissors",
+        "player2_choice": "paper",
+        "winner_id": 6,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played paper - win\nRound 3: You played scissors, opponent played rock - loss\nRound 4: You played paper, opponent played paper - draw\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played paper, opponent played scissors - loss\nRound 3: You played rock, opponent played scissors - win\nRound 4: You played paper, opponent played paper - draw\n",
+        "player1_response": "scissors",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 10:24:57"
+      }
+    ]
+  }
+}

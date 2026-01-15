@@ -1,0 +1,31 @@
+{
+  "run_id": "rps-match-38",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 38,
+    "player1_id": 2,
+    "player2_id": 11,
+    "match_type": "bo3",
+    "status": "error",
+    "winner_id": null,
+    "player1_score": 0,
+    "player2_score": 0,
+    "created_at": "2026-01-15 09:41:42",
+    "completed_at": null,
+    "error_message": "Player 2 (mistral/mistral-large-latest) failed: API error occurred: Status 503 Content-Type \"text/plain; charset=UTF-8\". Body: upstream connect error or disconnect/reset before headers. reset reason: overflow",
+    "player1": {
+      "id": 2,
+      "provider": "anthropic",
+      "model_name": "claude-sonnet-4-5",
+      "display_name": "anthropic/claude-sonnet-4-5"
+    },
+    "player2": {
+      "id": 11,
+      "provider": "mistral",
+      "model_name": "mistral-large-latest",
+      "display_name": "mistral/mistral-large-latest"
+    },
+    "winner": null,
+    "rounds": []
+  }
+}

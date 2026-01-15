@@ -1,0 +1,31 @@
+{
+  "run_id": "rps-match-32",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 32,
+    "player1_id": 2,
+    "player2_id": 3,
+    "match_type": "bo3",
+    "status": "in_progress",
+    "winner_id": null,
+    "player1_score": 0,
+    "player2_score": 0,
+    "created_at": "2026-01-15 09:38:46",
+    "completed_at": null,
+    "error_message": null,
+    "player1": {
+      "id": 2,
+      "provider": "anthropic",
+      "model_name": "claude-sonnet-4-5",
+      "display_name": "anthropic/claude-sonnet-4-5"
+    },
+    "player2": {
+      "id": 3,
+      "provider": "anthropic",
+      "model_name": "claude-opus-4-5",
+      "display_name": "anthropic/claude-opus-4-5"
+    },
+    "winner": null,
+    "rounds": []
+  }
+}

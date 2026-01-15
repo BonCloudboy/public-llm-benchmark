@@ -1,0 +1,63 @@
+{
+  "run_id": "rps-match-130",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 130,
+    "player1_id": 11,
+    "player2_id": 21,
+    "match_type": "bo3",
+    "status": "completed",
+    "winner_id": 21,
+    "player1_score": 0,
+    "player2_score": 2,
+    "created_at": "2026-01-15 10:47:24",
+    "completed_at": "2026-01-15 10:47:25",
+    "error_message": null,
+    "player1": {
+      "id": 11,
+      "provider": "mistral",
+      "model_name": "mistral-large-latest",
+      "display_name": "mistral/mistral-large-latest"
+    },
+    "player2": {
+      "id": 21,
+      "provider": "google",
+      "model_name": "gemini-2.5-flash-lite",
+      "display_name": "google/gemini-2.5-flash-lite"
+    },
+    "winner": {
+      "id": 21,
+      "provider": "google",
+      "model_name": "gemini-2.5-flash-lite",
+      "display_name": "google/gemini-2.5-flash-lite"
+    },
+    "rounds": [
+      {
+        "id": 670,
+        "match_id": 130,
+        "round_number": 1,
+        "player1_choice": "rock",
+        "player2_choice": "paper",
+        "winner_id": 21,
+        "player1_context": "This is the first round. No previous moves to analyze.",
+        "player2_context": "This is the first round. No previous moves to analyze.",
+        "player1_response": "rock",
+        "player2_response": "paper",
+        "created_at": "2026-01-15 10:47:24"
+      },
+      {
+        "id": 671,
+        "match_id": 130,
+        "round_number": 2,
+        "player1_choice": "scissors",
+        "player2_choice": "rock",
+        "winner_id": 21,
+        "player1_context": "Previous rounds:\nRound 1: You played rock, opponent played paper - loss\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played rock - win\n",
+        "player1_response": "scissors",
+        "player2_response": "rock",
+        "created_at": "2026-01-15 10:47:25"
+      }
+    ]
+  }
+}
