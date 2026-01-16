@@ -231,7 +231,7 @@ function renderStatsCard(title, items, emptyMessage) {
           (item, index) => `
             <li class="stats-row">
               <span class="stat-rank">#${index + 1}</span>
-              <span class="stat-label">${item.label}</span>
+              <span class="stat-label" title="${item.label}">${item.label}</span>
               <span class="stat-value">${item.value}</span>
             </li>
           `
@@ -306,6 +306,8 @@ function computeStats(entries) {
         sweeps20: 0,
         wins20: 0,
         wins21: 0,
+        losses02: 0,
+        losses12: 0,
         comebacks: 0
       });
     }
@@ -347,14 +349,17 @@ function computeStats(entries) {
     const player2Score = match.player2_score ?? 0;
     if (winnerId) {
       const winnerStats = winnerId === player1.id ? player1Stats : player2Stats;
+      const loserStats = winnerId === player1.id ? player2Stats : player1Stats;
       const winnerScore = winnerId === player1.id ? player1Score : player2Score;
       const loserScore = winnerId === player1.id ? player2Score : player1Score;
 
       if (winnerScore === 2 && loserScore === 0) {
         winnerStats.sweeps20 += 1;
         winnerStats.wins20 += 1;
+        loserStats.losses02 += 1;
       } else if (winnerScore === 2 && loserScore === 1) {
         winnerStats.wins21 += 1;
+        loserStats.losses12 += 1;
       }
     }
 
@@ -372,7 +377,9 @@ function computeStats(entries) {
     avgRounds: stats.roundsMatches ? stats.totalRounds / stats.roundsMatches : 0,
     winRate: stats.totalMatches ? stats.wins / stats.totalMatches : 0,
     winShare20: stats.wins ? stats.wins20 / stats.wins : 0,
-    winShare21: stats.wins ? stats.wins21 / stats.wins : 0
+    winShare21: stats.wins ? stats.wins21 / stats.wins : 0,
+    lossShare02: stats.losses ? stats.losses02 / stats.losses : 0,
+    lossShare12: stats.losses ? stats.losses12 / stats.losses : 0
   }));
 
   return {
@@ -419,13 +426,14 @@ function renderStats(stats) {
       };
     });
 
-  const mostSweeps = models
+  const mostLossShare02 = models
+    .filter((model) => model.losses > 0)
     .slice()
-    .sort((a, b) => b.sweeps20 - a.sweeps20)
+    .sort((a, b) => b.lossShare02 - a.lossShare02)
     .slice(0, 3)
     .map((model) => ({
       label: model.displayName,
-      value: model.sweeps20
+      value: `${(model.lossShare02 * 100).toFixed(0)}%`
     }));
 
   const bestWinRate = models
@@ -491,7 +499,7 @@ function renderStats(stats) {
     renderStatsCard('Most average rounds', mostAvgRounds, 'No round data yet.'),
     renderStatsCard('Least average rounds', leastAvgRounds, 'No round data yet.'),
     renderStatsCard('Longest games', longestGames, 'No completed matches yet.'),
-    renderStatsCard('Most clean 2-0 sweeps', mostSweeps, 'No sweeps yet.'),
+    renderStatsCard('Losses that are 0-2', mostLossShare02, 'No losses yet.'),
     renderStatsCard('Wins that are 2-0', mostWinShare20, 'No wins yet.'),
     renderStatsCard('Wins that are 2-1', mostWinShare21, 'No wins yet.'),
     renderStatsCard('Most comebacks', mostComebacks, 'No comebacks yet.'),
