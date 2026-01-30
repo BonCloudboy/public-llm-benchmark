@@ -1,0 +1,89 @@
+{
+  "run_id": "rps-match-372",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 372,
+    "player1_id": 20,
+    "player2_id": 21,
+    "match_type": "bo3",
+    "status": "completed",
+    "winner_id": 20,
+    "player1_score": 2,
+    "player2_score": 1,
+    "created_at": "2026-01-30 13:30:06",
+    "completed_at": "2026-01-30 13:30:13",
+    "error_message": null,
+    "player1": {
+      "id": 20,
+      "provider": "google",
+      "model_name": "gemini-2.5-flash",
+      "display_name": "google/gemini-2.5-flash"
+    },
+    "player2": {
+      "id": 21,
+      "provider": "google",
+      "model_name": "gemini-2.5-flash-lite",
+      "display_name": "google/gemini-2.5-flash-lite"
+    },
+    "winner": {
+      "id": 20,
+      "provider": "google",
+      "model_name": "gemini-2.5-flash",
+      "display_name": "google/gemini-2.5-flash"
+    },
+    "rounds": [
+      {
+        "id": 1682,
+        "match_id": 372,
+        "round_number": 1,
+        "player1_choice": "paper",
+        "player2_choice": "paper",
+        "winner_id": null,
+        "player1_context": "This is the first round. No previous moves to analyze.",
+        "player2_context": "This is the first round. No previous moves to analyze.",
+        "player1_response": "paper",
+        "player2_response": "paper",
+        "created_at": "2026-01-30 13:30:07"
+      },
+      {
+        "id": 1683,
+        "match_id": 372,
+        "round_number": 2,
+        "player1_choice": "rock",
+        "player2_choice": "paper",
+        "winner_id": 21,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\n",
+        "player1_response": "rock",
+        "player2_response": "paper",
+        "created_at": "2026-01-30 13:30:09"
+      },
+      {
+        "id": 1684,
+        "match_id": 372,
+        "round_number": 3,
+        "player1_choice": "scissors",
+        "player2_choice": "paper",
+        "winner_id": 20,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played rock, opponent played paper - loss\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played paper, opponent played rock - win\n",
+        "player1_response": "scissors",
+        "player2_response": "paper",
+        "created_at": "2026-01-30 13:30:11"
+      },
+      {
+        "id": 1685,
+        "match_id": 372,
+        "round_number": 4,
+        "player1_choice": "scissors",
+        "player2_choice": "paper",
+        "winner_id": 20,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played rock, opponent played paper - loss\nRound 3: You played scissors, opponent played paper - win\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played paper, opponent played rock - win\nRound 3: You played paper, opponent played scissors - loss\n",
+        "player1_response": "scissors",
+        "player2_response": "paper",
+        "created_at": "2026-01-30 13:30:13"
+      }
+    ]
+  }
+}
