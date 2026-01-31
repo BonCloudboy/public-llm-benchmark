@@ -27,6 +27,7 @@ let runsData = [];
 let pageSize = 50;
 let currentPage = 1;
 let statsRequestId = 0;
+let openRunCard = null;
 
 function formatDate(value) {
   if (!value) return '-';
@@ -44,6 +45,7 @@ function setStatus(message) {
 }
 
 function clearRunDetail() {
+  if (!runDetail) return;
   runDetail.innerHTML = '';
   runDetail.classList.add('hidden');
 }
@@ -89,21 +91,23 @@ function renderLeaderboard(setId) {
     .join('');
 
   leaderboardTables.innerHTML = `
-    <table>
-      <thead>
-        <tr>
-          <th>Rank</th>
-          <th>Model</th>
-          <th>Rating</th>
-          <th>Games</th>
-          <th>Wins</th>
-          <th>Losses</th>
-          <th>Draws</th>
-          <th>Win Rate</th>
-        </tr>
-      </thead>
-      <tbody>${rows}</tbody>
-    </table>
+    <div class="table-scroll">
+      <table>
+        <thead>
+          <tr>
+            <th>Rank</th>
+            <th>Model</th>
+            <th>Rating</th>
+            <th>Games</th>
+            <th>Wins</th>
+            <th>Losses</th>
+            <th>Draws</th>
+            <th>Win Rate</th>
+          </tr>
+        </thead>
+        <tbody>${rows}</tbody>
+      </table>
+    </div>
   `;
 }
 
@@ -131,6 +135,7 @@ function renderRunsList(runs, benchmarkPath) {
             <span>Status: ${status}</span>
             <span>Created: ${formatDate(run.created_at)}</span>
           </div>
+          <div class="run-detail hidden"></div>
         </div>
       `;
     })
@@ -141,7 +146,29 @@ function renderRunsList(runs, benchmarkPath) {
       const artifactRef = card.getAttribute('data-artifact');
       const benchmarkPathAttr = card.getAttribute('data-benchmark');
       if (!artifactRef || !benchmarkPathAttr) return;
-      await loadRunDetail(`${benchmarkPathAttr}/${artifactRef}`);
+      const detailContainer = card.querySelector('.run-detail');
+      if (!detailContainer) return;
+
+      if (openRunCard && openRunCard !== card) {
+        const prevDetail = openRunCard.querySelector('.run-detail');
+        if (prevDetail) {
+          prevDetail.innerHTML = '';
+          prevDetail.classList.add('hidden');
+        }
+        openRunCard.classList.remove('is-open');
+      }
+
+      if (card.classList.contains('is-open')) {
+        detailContainer.innerHTML = '';
+        detailContainer.classList.add('hidden');
+        card.classList.remove('is-open');
+        openRunCard = null;
+        return;
+      }
+
+      openRunCard = card;
+      card.classList.add('is-open');
+      await loadRunDetail(`${benchmarkPathAttr}/${artifactRef}`, detailContainer);
     });
   });
 }
@@ -192,10 +219,13 @@ function updateRunsView(benchmarkPath) {
   if (currentPage > totalPages) {
     currentPage = totalPages;
   }
+  openRunCard = null;
   renderRunsList(filtered, benchmarkPath);
 }
 
-async function loadRunDetail(artifactPath) {
+async function loadRunDetail(artifactPath, detailContainer) {
+  const target = detailContainer || runDetail;
+  if (!target) return;
   try {
     const response = await fetch(artifactPath);
     if (!response.ok) {
@@ -205,7 +235,7 @@ async function loadRunDetail(artifactPath) {
     const match = artifact.match || {};
     const rounds = match.rounds || [];
 
-    runDetail.innerHTML = `
+    target.innerHTML = `
       <h3>Run Detail</h3>
       <p><strong>Match:</strong> ${match.player1?.display_name || '-'} vs ${match.player2?.display_name || '-'}</p>
       <p><strong>Status:</strong> ${match.status || '-'}</p>
@@ -216,11 +246,11 @@ async function loadRunDetail(artifactPath) {
         <span>Completed: ${formatDate(match.completed_at)}</span>
       </div>
     `;
-    runDetail.classList.remove('hidden');
+    target.classList.remove('hidden');
   } catch (error) {
     const message = error instanceof Error ? error.message : 'Failed to load run details.';
-    runDetail.innerHTML = `<p class="error">${message}</p>`;
-    runDetail.classList.remove('hidden');
+    target.innerHTML = `<p class="error">${message}</p>`;
+    target.classList.remove('hidden');
   }
 }
 
@@ -550,6 +580,7 @@ async function loadBenchmark(benchmark) {
   if (!benchmark) return;
   currentBenchmark = benchmark;
   clearRunDetail();
+  openRunCard = null;
 
   const benchmarkPath = benchmark.path;
   setStatus('Loading...');
