@@ -1,0 +1,102 @@
+{
+  "run_id": "rps-match-470",
+  "benchmark_id": "rps",
+  "match": {
+    "id": 470,
+    "player1_id": 6,
+    "player2_id": 7,
+    "match_type": "bo3",
+    "status": "completed",
+    "winner_id": 7,
+    "player1_score": 1,
+    "player2_score": 2,
+    "created_at": "2026-01-30 18:14:08",
+    "completed_at": "2026-01-30 18:14:47",
+    "error_message": null,
+    "player1": {
+      "id": 6,
+      "provider": "openai",
+      "model_name": "gpt-5",
+      "display_name": "openai/gpt-5"
+    },
+    "player2": {
+      "id": 7,
+      "provider": "openai",
+      "model_name": "gpt-5-mini",
+      "display_name": "openai/gpt-5-mini"
+    },
+    "winner": {
+      "id": 7,
+      "provider": "openai",
+      "model_name": "gpt-5-mini",
+      "display_name": "openai/gpt-5-mini"
+    },
+    "rounds": [
+      {
+        "id": 2115,
+        "match_id": 470,
+        "round_number": 1,
+        "player1_choice": "paper",
+        "player2_choice": "paper",
+        "winner_id": null,
+        "player1_context": "This is the first round. No previous moves to analyze.",
+        "player2_context": "This is the first round. No previous moves to analyze.",
+        "player1_response": "paper",
+        "player2_response": "paper",
+        "created_at": "2026-01-30 18:14:12"
+      },
+      {
+        "id": 2116,
+        "match_id": 470,
+        "round_number": 2,
+        "player1_choice": "scissors",
+        "player2_choice": "scissors",
+        "winner_id": null,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\n",
+        "player1_response": "scissors",
+        "player2_response": "scissors",
+        "created_at": "2026-01-30 18:14:17"
+      },
+      {
+        "id": 2117,
+        "match_id": 470,
+        "round_number": 3,
+        "player1_choice": "paper",
+        "player2_choice": "rock",
+        "winner_id": 6,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played scissors - draw\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played scissors - draw\n",
+        "player1_response": "paper",
+        "player2_response": "rock",
+        "created_at": "2026-01-30 18:14:25"
+      },
+      {
+        "id": 2118,
+        "match_id": 470,
+        "round_number": 4,
+        "player1_choice": "scissors",
+        "player2_choice": "rock",
+        "winner_id": 7,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played scissors - draw\nRound 3: You played paper, opponent played rock - win\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played scissors - draw\nRound 3: You played rock, opponent played paper - loss\n",
+        "player1_response": "scissors",
+        "player2_response": "rock",
+        "created_at": "2026-01-30 18:14:34"
+      },
+      {
+        "id": 2119,
+        "match_id": 470,
+        "round_number": 5,
+        "player1_choice": "paper",
+        "player2_choice": "scissors",
+        "winner_id": 7,
+        "player1_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played scissors - draw\nRound 3: You played paper, opponent played rock - win\nRound 4: You played scissors, opponent played rock - loss\n",
+        "player2_context": "Previous rounds:\nRound 1: You played paper, opponent played paper - draw\nRound 2: You played scissors, opponent played scissors - draw\nRound 3: You played rock, opponent played paper - loss\nRound 4: You played rock, opponent played scissors - win\n",
+        "player1_response": "paper",
+        "player2_response": "scissors",
+        "created_at": "2026-01-30 18:14:47"
+      }
+    ]
+  }
+}
