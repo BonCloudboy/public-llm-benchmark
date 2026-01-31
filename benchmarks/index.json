@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-01-31T13:29:52.772Z",
+  "generated_at": "2026-01-31T16:38:18.494Z",
   "benchmarks": [
     {
       "benchmark_id": "rps",
@@ -9,7 +9,7 @@
       "run_types": [
         "match"
       ],
-      "updated_at": "2026-01-31T13:29:52.772Z"
+      "updated_at": "2026-01-31T16:38:18.494Z"
     }
   ]
 }

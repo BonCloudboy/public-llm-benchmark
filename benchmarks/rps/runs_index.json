@@ -1,628 +1,16 @@
 {
-  "generated_at": "2026-01-31T13:29:52.772Z",
-  "total_runs": 589,
+  "generated_at": "2026-01-31T16:38:18.494Z",
+  "total_runs": 782,
   "latest_runs": [
     {
-      "run_id": "rps-match-593",
+      "run_id": "rps-match-786",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 593,
+      "match_id": 786,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-31 12:18:32",
-      "completed_at": "2026-01-31 12:23:42",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 11,
-          "provider": "mistral",
-          "model_name": "mistral-large-latest",
-          "display_name": "mistral/mistral-large-latest"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 18,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-593.json"
-    },
-    {
-      "run_id": "rps-match-592",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 592,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-31 12:14:49",
-      "completed_at": "2026-01-31 12:18:31",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 3,
-          "provider": "anthropic",
-          "model_name": "claude-opus-4-5",
-          "display_name": "anthropic/claude-opus-4-5"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 18,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-592.json"
-    },
-    {
-      "run_id": "rps-match-591",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 591,
-      "match_type": "bo3",
-      "status": "error",
-      "created_at": "2026-01-31 12:06:28",
-      "completed_at": null,
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 11,
-          "provider": "mistral",
-          "model_name": "mistral-large-latest",
-          "display_name": "mistral/mistral-large-latest"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": null,
-        "player1_score": 0,
-        "player2_score": 0,
-        "is_draw": false
-      },
-      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
-      "artifacts_ref": "artifacts/rps-match-591.json"
-    },
-    {
-      "run_id": "rps-match-590",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 590,
-      "match_type": "bo3",
-      "status": "error",
-      "created_at": "2026-01-31 12:04:40",
-      "completed_at": null,
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 3,
-          "provider": "anthropic",
-          "model_name": "claude-opus-4-5",
-          "display_name": "anthropic/claude-opus-4-5"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": null,
-        "player1_score": 0,
-        "player2_score": 0,
-        "is_draw": false
-      },
-      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
-      "artifacts_ref": "artifacts/rps-match-590.json"
-    },
-    {
-      "run_id": "rps-match-589",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 589,
-      "match_type": "bo3",
-      "status": "error",
-      "created_at": "2026-01-31 11:57:27",
-      "completed_at": null,
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 11,
-          "provider": "mistral",
-          "model_name": "mistral-large-latest",
-          "display_name": "mistral/mistral-large-latest"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": null,
-        "player1_score": 0,
-        "player2_score": 0,
-        "is_draw": false
-      },
-      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
-      "artifacts_ref": "artifacts/rps-match-589.json"
-    },
-    {
-      "run_id": "rps-match-588",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 588,
-      "match_type": "bo3",
-      "status": "error",
-      "created_at": "2026-01-31 11:53:44",
-      "completed_at": null,
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 3,
-          "provider": "anthropic",
-          "model_name": "claude-opus-4-5",
-          "display_name": "anthropic/claude-opus-4-5"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": null,
-        "player1_score": 0,
-        "player2_score": 0,
-        "is_draw": false
-      },
-      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
-      "artifacts_ref": "artifacts/rps-match-588.json"
-    },
-    {
-      "run_id": "rps-match-587",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 587,
-      "match_type": "bo3",
-      "status": "error",
-      "created_at": "2026-01-31 11:33:39",
-      "completed_at": null,
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 11,
-          "provider": "mistral",
-          "model_name": "mistral-large-latest",
-          "display_name": "mistral/mistral-large-latest"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": null,
-        "player1_score": 0,
-        "player2_score": 0,
-        "is_draw": false
-      },
-      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
-      "artifacts_ref": "artifacts/rps-match-587.json"
-    },
-    {
-      "run_id": "rps-match-586",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 586,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-31 11:32:01",
-      "completed_at": "2026-01-31 11:33:38",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 6,
-          "provider": "openai",
-          "model_name": "gpt-5",
-          "display_name": "openai/gpt-5"
-        },
-        {
-          "role": "player2",
-          "model_id": 14,
-          "provider": "google",
-          "model_name": "gemini-2.5-pro",
-          "display_name": "google/gemini-2.5-pro"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 14,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-586.json"
-    },
-    {
-      "run_id": "rps-match-585",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 585,
-      "match_type": "bo3",
-      "status": "error",
-      "created_at": "2026-01-31 11:27:48",
-      "completed_at": null,
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 3,
-          "provider": "anthropic",
-          "model_name": "claude-opus-4-5",
-          "display_name": "anthropic/claude-opus-4-5"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": null,
-        "player1_score": 0,
-        "player2_score": 0,
-        "is_draw": false
-      },
-      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
-      "artifacts_ref": "artifacts/rps-match-585.json"
-    },
-    {
-      "run_id": "rps-match-584",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 584,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-31 11:20:04",
-      "completed_at": "2026-01-31 11:21:01",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 14,
-          "provider": "google",
-          "model_name": "gemini-2.5-pro",
-          "display_name": "google/gemini-2.5-pro"
-        },
-        {
-          "role": "player2",
-          "model_id": 16,
-          "provider": "deepseek",
-          "model_name": "deepseek-reasoner",
-          "display_name": "deepseek/deepseek-reasoner"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 16,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-584.json"
-    },
-    {
-      "run_id": "rps-match-583",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 583,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-31 11:16:55",
-      "completed_at": "2026-01-31 11:20:03",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        },
-        {
-          "role": "player2",
-          "model_id": 20,
-          "provider": "google",
-          "model_name": "gemini-2.5-flash",
-          "display_name": "google/gemini-2.5-flash"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 18,
-        "player1_score": 2,
-        "player2_score": 1,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-583.json"
-    },
-    {
-      "run_id": "rps-match-582",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 582,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-31 11:15:52",
-      "completed_at": "2026-01-31 11:16:54",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        },
-        {
-          "role": "player2",
-          "model_id": 19,
-          "provider": "mistral",
-          "model_name": "magistral-small-latest",
-          "display_name": "mistral/magistral-small-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 19,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-582.json"
-    },
-    {
-      "run_id": "rps-match-581",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 581,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-31 11:13:59",
-      "completed_at": "2026-01-31 11:15:51",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 12,
-          "provider": "mistral",
-          "model_name": "mistral-medium-latest",
-          "display_name": "mistral/mistral-medium-latest"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 18,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-581.json"
-    },
-    {
-      "run_id": "rps-match-580",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 580,
-      "match_type": "bo3",
-      "status": "error",
-      "created_at": "2026-01-31 11:08:33",
-      "completed_at": null,
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 11,
-          "provider": "mistral",
-          "model_name": "mistral-large-latest",
-          "display_name": "mistral/mistral-large-latest"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": null,
-        "player1_score": 0,
-        "player2_score": 0,
-        "is_draw": false
-      },
-      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
-      "artifacts_ref": "artifacts/rps-match-580.json"
-    },
-    {
-      "run_id": "rps-match-579",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 579,
-      "match_type": "bo3",
-      "status": "error",
-      "created_at": "2026-01-31 11:07:11",
-      "completed_at": null,
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 6,
-          "provider": "openai",
-          "model_name": "gpt-5",
-          "display_name": "openai/gpt-5"
-        },
-        {
-          "role": "player2",
-          "model_id": 14,
-          "provider": "google",
-          "model_name": "gemini-2.5-pro",
-          "display_name": "google/gemini-2.5-pro"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": null,
-        "player1_score": 0,
-        "player2_score": 0,
-        "is_draw": false
-      },
-      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
-      "artifacts_ref": "artifacts/rps-match-579.json"
-    },
-    {
-      "run_id": "rps-match-578",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 578,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-31 11:04:55",
-      "completed_at": "2026-01-31 11:07:10",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 4,
-          "provider": "anthropic",
-          "model_name": "claude-haiku-4-5",
-          "display_name": "anthropic/claude-haiku-4-5"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 18,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-578.json"
-    },
-    {
-      "run_id": "rps-match-577",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 577,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-31 11:04:15",
-      "completed_at": "2026-01-31 11:04:54",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 3,
-          "provider": "anthropic",
-          "model_name": "claude-opus-4-5",
-          "display_name": "anthropic/claude-opus-4-5"
-        },
-        {
-          "role": "player2",
-          "model_id": 14,
-          "provider": "google",
-          "model_name": "gemini-2.5-pro",
-          "display_name": "google/gemini-2.5-pro"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 14,
-        "player1_score": 1,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-577.json"
-    },
-    {
-      "run_id": "rps-match-576",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 576,
-      "match_type": "bo3",
-      "status": "error",
-      "created_at": "2026-01-31 11:01:55",
-      "completed_at": null,
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 3,
-          "provider": "anthropic",
-          "model_name": "claude-opus-4-5",
-          "display_name": "anthropic/claude-opus-4-5"
-        },
-        {
-          "role": "player2",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": null,
-        "player1_score": 0,
-        "player2_score": 0,
-        "is_draw": false
-      },
-      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
-      "artifacts_ref": "artifacts/rps-match-576.json"
-    },
-    {
-      "run_id": "rps-match-575",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 575,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-31 11:00:40",
-      "completed_at": "2026-01-31 11:01:54",
+      "created_at": "2026-01-31 16:37:14",
+      "completed_at": "2026-01-31 16:38:07",
       "participants": [
         {
           "role": "player1",
@@ -640,23 +28,737 @@
         }
       ],
       "outcome": {
-        "winner_model_id": 2,
-        "player1_score": 2,
-        "player2_score": 1,
+        "winner_model_id": 14,
+        "player1_score": 1,
+        "player2_score": 2,
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-575.json"
+      "artifacts_ref": "artifacts/rps-match-786.json"
     },
     {
-      "run_id": "rps-match-574",
+      "run_id": "rps-match-785",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 574,
+      "match_id": 785,
+      "match_type": "bo3",
+      "status": "error",
+      "created_at": "2026-01-31 16:26:04",
+      "completed_at": null,
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 2,
+          "provider": "anthropic",
+          "model_name": "claude-sonnet-4-5",
+          "display_name": "anthropic/claude-sonnet-4-5"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+      "artifacts_ref": "artifacts/rps-match-785.json"
+    },
+    {
+      "run_id": "rps-match-784",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 784,
+      "match_type": "bo3",
+      "status": "in_progress",
+      "created_at": "2026-01-31 16:21:06",
+      "completed_at": null,
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 2,
+          "provider": "anthropic",
+          "model_name": "claude-sonnet-4-5",
+          "display_name": "anthropic/claude-sonnet-4-5"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-784.json"
+    },
+    {
+      "run_id": "rps-match-783",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 783,
+      "match_type": "bo3",
+      "status": "in_progress",
+      "created_at": "2026-01-31 16:20:15",
+      "completed_at": null,
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 2,
+          "provider": "anthropic",
+          "model_name": "claude-sonnet-4-5",
+          "display_name": "anthropic/claude-sonnet-4-5"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-783.json"
+    },
+    {
+      "run_id": "rps-match-782",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 782,
+      "match_type": "bo3",
+      "status": "error",
+      "created_at": "2026-01-31 16:13:45",
+      "completed_at": null,
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 2,
+          "provider": "anthropic",
+          "model_name": "claude-sonnet-4-5",
+          "display_name": "anthropic/claude-sonnet-4-5"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+      "artifacts_ref": "artifacts/rps-match-782.json"
+    },
+    {
+      "run_id": "rps-match-781",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 781,
+      "match_type": "bo3",
+      "status": "error",
+      "created_at": "2026-01-31 16:10:55",
+      "completed_at": null,
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 2,
+          "provider": "anthropic",
+          "model_name": "claude-sonnet-4-5",
+          "display_name": "anthropic/claude-sonnet-4-5"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+      "artifacts_ref": "artifacts/rps-match-781.json"
+    },
+    {
+      "run_id": "rps-match-780",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 780,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:39:37",
-      "completed_at": "2026-01-30 19:44:03",
+      "created_at": "2026-01-31 16:08:29",
+      "completed_at": "2026-01-31 16:09:21",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 13,
+          "provider": "google",
+          "model_name": "gemini-3-flash-preview",
+          "display_name": "google/gemini-3-flash-preview"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 14,
+        "player1_score": 1,
+        "player2_score": 2,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-780.json"
+    },
+    {
+      "run_id": "rps-match-779",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 779,
+      "match_type": "bo3",
+      "status": "error",
+      "created_at": "2026-01-31 16:07:20",
+      "completed_at": null,
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 2,
+          "provider": "anthropic",
+          "model_name": "claude-sonnet-4-5",
+          "display_name": "anthropic/claude-sonnet-4-5"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+      "artifacts_ref": "artifacts/rps-match-779.json"
+    },
+    {
+      "run_id": "rps-match-778",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 778,
+      "match_type": "bo3",
+      "status": "error",
+      "created_at": "2026-01-31 16:06:16",
+      "completed_at": null,
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 13,
+          "provider": "google",
+          "model_name": "gemini-3-flash-preview",
+          "display_name": "google/gemini-3-flash-preview"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+      "artifacts_ref": "artifacts/rps-match-778.json"
+    },
+    {
+      "run_id": "rps-match-777",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 777,
+      "match_type": "bo3",
+      "status": "error",
+      "created_at": "2026-01-31 16:05:20",
+      "completed_at": null,
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 2,
+          "provider": "anthropic",
+          "model_name": "claude-sonnet-4-5",
+          "display_name": "anthropic/claude-sonnet-4-5"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+      "artifacts_ref": "artifacts/rps-match-777.json"
+    },
+    {
+      "run_id": "rps-match-776",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 776,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 16:02:09",
+      "completed_at": "2026-01-31 16:05:04",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        },
+        {
+          "role": "player2",
+          "model_id": 16,
+          "provider": "deepseek",
+          "model_name": "deepseek-reasoner",
+          "display_name": "deepseek/deepseek-reasoner"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 16,
+        "player1_score": 0,
+        "player2_score": 2,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-776.json"
+    },
+    {
+      "run_id": "rps-match-775",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 775,
+      "match_type": "bo3",
+      "status": "error",
+      "created_at": "2026-01-31 16:01:22",
+      "completed_at": null,
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 13,
+          "provider": "google",
+          "model_name": "gemini-3-flash-preview",
+          "display_name": "google/gemini-3-flash-preview"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+      "artifacts_ref": "artifacts/rps-match-775.json"
+    },
+    {
+      "run_id": "rps-match-774",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 774,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 16:00:57",
+      "completed_at": "2026-01-31 16:01:21",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 1,
+          "provider": "google",
+          "model_name": "gemini-3-pro-preview",
+          "display_name": "google/gemini-3-pro-preview"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 14,
+        "player1_score": 0,
+        "player2_score": 2,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-774.json"
+    },
+    {
+      "run_id": "rps-match-773",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 773,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:59:46",
+      "completed_at": "2026-01-31 16:00:56",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 18,
+          "provider": "mistral",
+          "model_name": "magistral-medium-latest",
+          "display_name": "mistral/magistral-medium-latest"
+        },
+        {
+          "role": "player2",
+          "model_id": 20,
+          "provider": "google",
+          "model_name": "gemini-2.5-flash",
+          "display_name": "google/gemini-2.5-flash"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 18,
+        "player1_score": 2,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-773.json"
+    },
+    {
+      "run_id": "rps-match-772",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 772,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:58:34",
+      "completed_at": "2026-01-31 15:59:45",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 18,
+          "provider": "mistral",
+          "model_name": "magistral-medium-latest",
+          "display_name": "mistral/magistral-medium-latest"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 14,
+        "player1_score": 0,
+        "player2_score": 2,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-772.json"
+    },
+    {
+      "run_id": "rps-match-771",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 771,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:54:35",
+      "completed_at": "2026-01-31 15:58:33",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 18,
+          "provider": "mistral",
+          "model_name": "magistral-medium-latest",
+          "display_name": "mistral/magistral-medium-latest"
+        },
+        {
+          "role": "player2",
+          "model_id": 1,
+          "provider": "google",
+          "model_name": "gemini-3-pro-preview",
+          "display_name": "google/gemini-3-pro-preview"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 18,
+        "player1_score": 2,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-771.json"
+    },
+    {
+      "run_id": "rps-match-770",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 770,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:54:00",
+      "completed_at": "2026-01-31 15:54:34",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 18,
+          "provider": "mistral",
+          "model_name": "magistral-medium-latest",
+          "display_name": "mistral/magistral-medium-latest"
+        },
+        {
+          "role": "player2",
+          "model_id": 19,
+          "provider": "mistral",
+          "model_name": "magistral-small-latest",
+          "display_name": "mistral/magistral-small-latest"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 19,
+        "player1_score": 0,
+        "player2_score": 2,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-770.json"
+    },
+    {
+      "run_id": "rps-match-769",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 769,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:53:49",
+      "completed_at": "2026-01-31 15:53:59",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 12,
+          "provider": "mistral",
+          "model_name": "mistral-medium-latest",
+          "display_name": "mistral/mistral-medium-latest"
+        },
+        {
+          "role": "player2",
+          "model_id": 18,
+          "provider": "mistral",
+          "model_name": "magistral-medium-latest",
+          "display_name": "mistral/magistral-medium-latest"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 12,
+        "player1_score": 2,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-769.json"
+    },
+    {
+      "run_id": "rps-match-768",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 768,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:53:29",
+      "completed_at": "2026-01-31 15:53:48",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 11,
+          "provider": "mistral",
+          "model_name": "mistral-large-latest",
+          "display_name": "mistral/mistral-large-latest"
+        },
+        {
+          "role": "player2",
+          "model_id": 18,
+          "provider": "mistral",
+          "model_name": "magistral-medium-latest",
+          "display_name": "mistral/magistral-medium-latest"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 18,
+        "player1_score": 0,
+        "player2_score": 2,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-768.json"
+    },
+    {
+      "run_id": "rps-match-767",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 767,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:52:58",
+      "completed_at": "2026-01-31 15:53:28",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 5,
+          "provider": "openai",
+          "model_name": "gpt-5.2",
+          "display_name": "openai/gpt-5.2"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 14,
+        "player1_score": 0,
+        "player2_score": 2,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-767.json"
+    },
+    {
+      "run_id": "rps-match-766",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 766,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:52:32",
+      "completed_at": "2026-01-31 15:52:57",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 5,
+          "provider": "openai",
+          "model_name": "gpt-5.2",
+          "display_name": "openai/gpt-5.2"
+        },
+        {
+          "role": "player2",
+          "model_id": 18,
+          "provider": "mistral",
+          "model_name": "magistral-medium-latest",
+          "display_name": "mistral/magistral-medium-latest"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 5,
+        "player1_score": 2,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-766.json"
+    },
+    {
+      "run_id": "rps-match-765",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 765,
+      "match_type": "bo3",
+      "status": "error",
+      "created_at": "2026-01-31 15:51:23",
+      "completed_at": null,
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 2,
+          "provider": "anthropic",
+          "model_name": "claude-sonnet-4-5",
+          "display_name": "anthropic/claude-sonnet-4-5"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+      "artifacts_ref": "artifacts/rps-match-765.json"
+    },
+    {
+      "run_id": "rps-match-764",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 764,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:48:27",
+      "completed_at": "2026-01-31 15:50:49",
       "participants": [
         {
           "role": "player1",
@@ -680,17 +782,17 @@
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-574.json"
+      "artifacts_ref": "artifacts/rps-match-764.json"
     },
     {
-      "run_id": "rps-match-573",
+      "run_id": "rps-match-763",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 573,
+      "match_id": 763,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:39:12",
-      "completed_at": "2026-01-30 19:39:36",
+      "created_at": "2026-01-31 15:43:32",
+      "completed_at": "2026-01-31 15:48:26",
       "participants": [
         {
           "role": "player1",
@@ -714,17 +816,17 @@
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-573.json"
+      "artifacts_ref": "artifacts/rps-match-763.json"
     },
     {
-      "run_id": "rps-match-572",
+      "run_id": "rps-match-762",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 572,
+      "match_id": 762,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:39:08",
-      "completed_at": "2026-01-30 19:39:11",
+      "created_at": "2026-01-31 15:43:24",
+      "completed_at": "2026-01-31 15:43:31",
       "participants": [
         {
           "role": "player1",
@@ -744,21 +846,21 @@
       "outcome": {
         "winner_model_id": 21,
         "player1_score": 2,
-        "player2_score": 0,
+        "player2_score": 1,
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-572.json"
+      "artifacts_ref": "artifacts/rps-match-762.json"
     },
     {
-      "run_id": "rps-match-571",
+      "run_id": "rps-match-761",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 571,
+      "match_id": 761,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:38:08",
-      "completed_at": "2026-01-30 19:39:07",
+      "created_at": "2026-01-31 15:42:40",
+      "completed_at": "2026-01-31 15:43:23",
       "participants": [
         {
           "role": "player1",
@@ -776,23 +878,23 @@
         }
       ],
       "outcome": {
-        "winner_model_id": 20,
-        "player1_score": 2,
-        "player2_score": 0,
+        "winner_model_id": 16,
+        "player1_score": 0,
+        "player2_score": 2,
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-571.json"
+      "artifacts_ref": "artifacts/rps-match-761.json"
     },
     {
-      "run_id": "rps-match-570",
+      "run_id": "rps-match-760",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 570,
+      "match_id": 760,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:37:59",
-      "completed_at": "2026-01-30 19:38:07",
+      "created_at": "2026-01-31 15:42:26",
+      "completed_at": "2026-01-31 15:42:39",
       "participants": [
         {
           "role": "player1",
@@ -816,17 +918,17 @@
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-570.json"
+      "artifacts_ref": "artifacts/rps-match-760.json"
     },
     {
-      "run_id": "rps-match-569",
+      "run_id": "rps-match-759",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 569,
+      "match_id": 759,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:37:56",
-      "completed_at": "2026-01-30 19:37:58",
+      "created_at": "2026-01-31 15:42:23",
+      "completed_at": "2026-01-31 15:42:25",
       "participants": [
         {
           "role": "player1",
@@ -850,16 +952,16 @@
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-569.json"
+      "artifacts_ref": "artifacts/rps-match-759.json"
     },
     {
-      "run_id": "rps-match-568",
+      "run_id": "rps-match-758",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 568,
+      "match_id": 758,
       "match_type": "bo3",
       "status": "error",
-      "created_at": "2026-01-30 19:34:43",
+      "created_at": "2026-01-31 15:38:38",
       "completed_at": null,
       "participants": [
         {
@@ -884,17 +986,17 @@
         "is_draw": false
       },
       "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
-      "artifacts_ref": "artifacts/rps-match-568.json"
+      "artifacts_ref": "artifacts/rps-match-758.json"
     },
     {
-      "run_id": "rps-match-567",
+      "run_id": "rps-match-757",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 567,
+      "match_id": 757,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:34:27",
-      "completed_at": "2026-01-30 19:34:42",
+      "created_at": "2026-01-31 15:37:51",
+      "completed_at": "2026-01-31 15:38:37",
       "participants": [
         {
           "role": "player1",
@@ -914,21 +1016,21 @@
       "outcome": {
         "winner_model_id": 14,
         "player1_score": 2,
-        "player2_score": 0,
+        "player2_score": 1,
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-567.json"
+      "artifacts_ref": "artifacts/rps-match-757.json"
     },
     {
-      "run_id": "rps-match-566",
+      "run_id": "rps-match-756",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 566,
+      "match_id": 756,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:33:34",
-      "completed_at": "2026-01-30 19:34:26",
+      "created_at": "2026-01-31 15:37:15",
+      "completed_at": "2026-01-31 15:37:50",
       "participants": [
         {
           "role": "player1",
@@ -948,21 +1050,21 @@
       "outcome": {
         "winner_model_id": 14,
         "player1_score": 2,
-        "player2_score": 0,
+        "player2_score": 1,
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-566.json"
+      "artifacts_ref": "artifacts/rps-match-756.json"
     },
     {
-      "run_id": "rps-match-565",
+      "run_id": "rps-match-755",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 565,
+      "match_id": 755,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:33:16",
-      "completed_at": "2026-01-30 19:33:33",
+      "created_at": "2026-01-31 15:36:46",
+      "completed_at": "2026-01-31 15:37:14",
       "participants": [
         {
           "role": "player1",
@@ -986,17 +1088,17 @@
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-565.json"
+      "artifacts_ref": "artifacts/rps-match-755.json"
     },
     {
-      "run_id": "rps-match-564",
+      "run_id": "rps-match-754",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 564,
+      "match_id": 754,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:32:00",
-      "completed_at": "2026-01-30 19:33:15",
+      "created_at": "2026-01-31 15:36:00",
+      "completed_at": "2026-01-31 15:36:45",
       "participants": [
         {
           "role": "player1",
@@ -1020,17 +1122,17 @@
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-564.json"
+      "artifacts_ref": "artifacts/rps-match-754.json"
     },
     {
-      "run_id": "rps-match-563",
+      "run_id": "rps-match-753",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 563,
+      "match_id": 753,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:31:34",
-      "completed_at": "2026-01-30 19:31:59",
+      "created_at": "2026-01-31 15:35:38",
+      "completed_at": "2026-01-31 15:35:59",
       "participants": [
         {
           "role": "player1",
@@ -1050,21 +1152,21 @@
       "outcome": {
         "winner_model_id": 13,
         "player1_score": 2,
-        "player2_score": 1,
+        "player2_score": 0,
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-563.json"
+      "artifacts_ref": "artifacts/rps-match-753.json"
     },
     {
-      "run_id": "rps-match-562",
+      "run_id": "rps-match-752",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 562,
+      "match_id": 752,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:31:21",
-      "completed_at": "2026-01-30 19:31:33",
+      "created_at": "2026-01-31 15:35:25",
+      "completed_at": "2026-01-31 15:35:37",
       "participants": [
         {
           "role": "player1",
@@ -1084,21 +1186,21 @@
       "outcome": {
         "winner_model_id": 13,
         "player1_score": 2,
-        "player2_score": 1,
+        "player2_score": 0,
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-562.json"
+      "artifacts_ref": "artifacts/rps-match-752.json"
     },
     {
-      "run_id": "rps-match-561",
+      "run_id": "rps-match-751",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 561,
+      "match_id": 751,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:31:03",
-      "completed_at": "2026-01-30 19:31:20",
+      "created_at": "2026-01-31 15:34:17",
+      "completed_at": "2026-01-31 15:35:24",
       "participants": [
         {
           "role": "player1",
@@ -1116,268 +1218,64 @@
         }
       ],
       "outcome": {
-        "winner_model_id": 13,
-        "player1_score": 2,
-        "player2_score": 1,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-561.json"
-    },
-    {
-      "run_id": "rps-match-560",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 560,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-30 19:30:01",
-      "completed_at": "2026-01-30 19:31:02",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 13,
-          "provider": "google",
-          "model_name": "gemini-3-flash-preview",
-          "display_name": "google/gemini-3-flash-preview"
-        },
-        {
-          "role": "player2",
-          "model_id": 14,
-          "provider": "google",
-          "model_name": "gemini-2.5-pro",
-          "display_name": "google/gemini-2.5-pro"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 14,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-560.json"
-    },
-    {
-      "run_id": "rps-match-559",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 559,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-30 19:29:12",
-      "completed_at": "2026-01-30 19:29:59",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 1,
-          "provider": "google",
-          "model_name": "gemini-3-pro-preview",
-          "display_name": "google/gemini-3-pro-preview"
-        },
-        {
-          "role": "player2",
-          "model_id": 16,
-          "provider": "deepseek",
-          "model_name": "deepseek-reasoner",
-          "display_name": "deepseek/deepseek-reasoner"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 16,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-559.json"
-    },
-    {
-      "run_id": "rps-match-558",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 558,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-30 19:28:45",
-      "completed_at": "2026-01-30 19:29:11",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 1,
-          "provider": "google",
-          "model_name": "gemini-3-pro-preview",
-          "display_name": "google/gemini-3-pro-preview"
-        },
-        {
-          "role": "player2",
-          "model_id": 15,
-          "provider": "deepseek",
-          "model_name": "deepseek-chat",
-          "display_name": "deepseek/deepseek-chat"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 1,
-        "player1_score": 2,
-        "player2_score": 0,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-558.json"
-    },
-    {
-      "run_id": "rps-match-557",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 557,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-30 19:28:28",
-      "completed_at": "2026-01-30 19:28:44",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 1,
-          "provider": "google",
-          "model_name": "gemini-3-pro-preview",
-          "display_name": "google/gemini-3-pro-preview"
-        },
-        {
-          "role": "player2",
-          "model_id": 21,
-          "provider": "google",
-          "model_name": "gemini-2.5-flash-lite",
-          "display_name": "google/gemini-2.5-flash-lite"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 1,
-        "player1_score": 2,
-        "player2_score": 0,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-557.json"
-    },
-    {
-      "run_id": "rps-match-556",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 556,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-30 19:28:09",
-      "completed_at": "2026-01-30 19:28:27",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 1,
-          "provider": "google",
-          "model_name": "gemini-3-pro-preview",
-          "display_name": "google/gemini-3-pro-preview"
-        },
-        {
-          "role": "player2",
-          "model_id": 20,
-          "provider": "google",
-          "model_name": "gemini-2.5-flash",
-          "display_name": "google/gemini-2.5-flash"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 1,
-        "player1_score": 2,
-        "player2_score": 1,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-556.json"
-    },
-    {
-      "run_id": "rps-match-555",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 555,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-30 19:27:36",
-      "completed_at": "2026-01-30 19:28:08",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 1,
-          "provider": "google",
-          "model_name": "gemini-3-pro-preview",
-          "display_name": "google/gemini-3-pro-preview"
-        },
-        {
-          "role": "player2",
-          "model_id": 14,
-          "provider": "google",
-          "model_name": "gemini-2.5-pro",
-          "display_name": "google/gemini-2.5-pro"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 14,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-555.json"
-    },
-    {
-      "run_id": "rps-match-554",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 554,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-30 19:26:45",
-      "completed_at": "2026-01-30 19:27:35",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 1,
-          "provider": "google",
-          "model_name": "gemini-3-pro-preview",
-          "display_name": "google/gemini-3-pro-preview"
-        },
-        {
-          "role": "player2",
-          "model_id": 13,
-          "provider": "google",
-          "model_name": "gemini-3-flash-preview",
-          "display_name": "google/gemini-3-flash-preview"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 13,
+        "winner_model_id": 20,
         "player1_score": 1,
         "player2_score": 2,
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-554.json"
+      "artifacts_ref": "artifacts/rps-match-751.json"
     },
     {
-      "run_id": "rps-match-553",
+      "run_id": "rps-match-750",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 553,
+      "match_id": 750,
       "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-30 19:25:11",
-      "completed_at": "2026-01-30 19:26:44",
+      "status": "error",
+      "created_at": "2026-01-31 15:33:10",
+      "completed_at": null,
       "participants": [
         {
           "role": "player1",
-          "model_id": 19,
-          "provider": "mistral",
-          "model_name": "magistral-small-latest",
-          "display_name": "mistral/magistral-small-latest"
+          "model_id": 13,
+          "provider": "google",
+          "model_name": "gemini-3-flash-preview",
+          "display_name": "google/gemini-3-flash-preview"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+      "artifacts_ref": "artifacts/rps-match-750.json"
+    },
+    {
+      "run_id": "rps-match-749",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 749,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:32:12",
+      "completed_at": "2026-01-31 15:33:09",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 1,
+          "provider": "google",
+          "model_name": "gemini-3-pro-preview",
+          "display_name": "google/gemini-3-pro-preview"
         },
         {
           "role": "player2",
@@ -1394,24 +1292,24 @@
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-553.json"
+      "artifacts_ref": "artifacts/rps-match-749.json"
     },
     {
-      "run_id": "rps-match-552",
+      "run_id": "rps-match-748",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 552,
+      "match_id": 748,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:25:00",
-      "completed_at": "2026-01-30 19:25:10",
+      "created_at": "2026-01-31 15:31:45",
+      "completed_at": "2026-01-31 15:32:11",
       "participants": [
         {
           "role": "player1",
-          "model_id": 19,
-          "provider": "mistral",
-          "model_name": "magistral-small-latest",
-          "display_name": "mistral/magistral-small-latest"
+          "model_id": 1,
+          "provider": "google",
+          "model_name": "gemini-3-pro-preview",
+          "display_name": "google/gemini-3-pro-preview"
         },
         {
           "role": "player2",
@@ -1422,30 +1320,30 @@
         }
       ],
       "outcome": {
-        "winner_model_id": 19,
+        "winner_model_id": 1,
         "player1_score": 2,
         "player2_score": 0,
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-552.json"
+      "artifacts_ref": "artifacts/rps-match-748.json"
     },
     {
-      "run_id": "rps-match-551",
+      "run_id": "rps-match-747",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 551,
+      "match_id": 747,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:24:45",
-      "completed_at": "2026-01-30 19:24:59",
+      "created_at": "2026-01-31 15:31:24",
+      "completed_at": "2026-01-31 15:31:44",
       "participants": [
         {
           "role": "player1",
-          "model_id": 19,
-          "provider": "mistral",
-          "model_name": "magistral-small-latest",
-          "display_name": "mistral/magistral-small-latest"
+          "model_id": 1,
+          "provider": "google",
+          "model_name": "gemini-3-pro-preview",
+          "display_name": "google/gemini-3-pro-preview"
         },
         {
           "role": "player2",
@@ -1462,17 +1360,221 @@
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-551.json"
+      "artifacts_ref": "artifacts/rps-match-747.json"
     },
     {
-      "run_id": "rps-match-550",
+      "run_id": "rps-match-746",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 550,
+      "match_id": 746,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:24:13",
-      "completed_at": "2026-01-30 19:24:44",
+      "created_at": "2026-01-31 15:30:04",
+      "completed_at": "2026-01-31 15:31:23",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 1,
+          "provider": "google",
+          "model_name": "gemini-3-pro-preview",
+          "display_name": "google/gemini-3-pro-preview"
+        },
+        {
+          "role": "player2",
+          "model_id": 20,
+          "provider": "google",
+          "model_name": "gemini-2.5-flash",
+          "display_name": "google/gemini-2.5-flash"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 20,
+        "player1_score": 0,
+        "player2_score": 2,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-746.json"
+    },
+    {
+      "run_id": "rps-match-745",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 745,
+      "match_type": "bo3",
+      "status": "error",
+      "created_at": "2026-01-31 15:28:50",
+      "completed_at": null,
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 1,
+          "provider": "google",
+          "model_name": "gemini-3-pro-preview",
+          "display_name": "google/gemini-3-pro-preview"
+        },
+        {
+          "role": "player2",
+          "model_id": 14,
+          "provider": "google",
+          "model_name": "gemini-2.5-pro",
+          "display_name": "google/gemini-2.5-pro"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": null,
+        "player1_score": 0,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": "Too many invalid responses (3 skipped rounds). Match aborted.",
+      "artifacts_ref": "artifacts/rps-match-745.json"
+    },
+    {
+      "run_id": "rps-match-744",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 744,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:28:22",
+      "completed_at": "2026-01-31 15:28:49",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 1,
+          "provider": "google",
+          "model_name": "gemini-3-pro-preview",
+          "display_name": "google/gemini-3-pro-preview"
+        },
+        {
+          "role": "player2",
+          "model_id": 13,
+          "provider": "google",
+          "model_name": "gemini-3-flash-preview",
+          "display_name": "google/gemini-3-flash-preview"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 1,
+        "player1_score": 2,
+        "player2_score": 1,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-744.json"
+    },
+    {
+      "run_id": "rps-match-743",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 743,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:21:26",
+      "completed_at": "2026-01-31 15:28:21",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 19,
+          "provider": "mistral",
+          "model_name": "magistral-small-latest",
+          "display_name": "mistral/magistral-small-latest"
+        },
+        {
+          "role": "player2",
+          "model_id": 16,
+          "provider": "deepseek",
+          "model_name": "deepseek-reasoner",
+          "display_name": "deepseek/deepseek-reasoner"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 16,
+        "player1_score": 1,
+        "player2_score": 2,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-743.json"
+    },
+    {
+      "run_id": "rps-match-742",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 742,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:20:54",
+      "completed_at": "2026-01-31 15:21:25",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 19,
+          "provider": "mistral",
+          "model_name": "magistral-small-latest",
+          "display_name": "mistral/magistral-small-latest"
+        },
+        {
+          "role": "player2",
+          "model_id": 15,
+          "provider": "deepseek",
+          "model_name": "deepseek-chat",
+          "display_name": "deepseek/deepseek-chat"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 15,
+        "player1_score": 1,
+        "player2_score": 2,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-742.json"
+    },
+    {
+      "run_id": "rps-match-741",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 741,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:20:44",
+      "completed_at": "2026-01-31 15:20:53",
+      "participants": [
+        {
+          "role": "player1",
+          "model_id": 19,
+          "provider": "mistral",
+          "model_name": "magistral-small-latest",
+          "display_name": "mistral/magistral-small-latest"
+        },
+        {
+          "role": "player2",
+          "model_id": 21,
+          "provider": "google",
+          "model_name": "gemini-2.5-flash-lite",
+          "display_name": "google/gemini-2.5-flash-lite"
+        }
+      ],
+      "outcome": {
+        "winner_model_id": 19,
+        "player1_score": 2,
+        "player2_score": 0,
+        "is_draw": false
+      },
+      "error_message": null,
+      "artifacts_ref": "artifacts/rps-match-741.json"
+    },
+    {
+      "run_id": "rps-match-740",
+      "benchmark_id": "rps",
+      "run_type": "match",
+      "match_id": 740,
+      "match_type": "bo3",
+      "status": "completed",
+      "created_at": "2026-01-31 15:20:23",
+      "completed_at": "2026-01-31 15:20:43",
       "participants": [
         {
           "role": "player1",
@@ -1496,17 +1598,17 @@
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-550.json"
+      "artifacts_ref": "artifacts/rps-match-740.json"
     },
     {
-      "run_id": "rps-match-549",
+      "run_id": "rps-match-739",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 549,
+      "match_id": 739,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:23:48",
-      "completed_at": "2026-01-30 19:24:12",
+      "created_at": "2026-01-31 15:19:38",
+      "completed_at": "2026-01-31 15:20:22",
       "participants": [
         {
           "role": "player1",
@@ -1530,17 +1632,17 @@
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-549.json"
+      "artifacts_ref": "artifacts/rps-match-739.json"
     },
     {
-      "run_id": "rps-match-548",
+      "run_id": "rps-match-738",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 548,
+      "match_id": 738,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:23:27",
-      "completed_at": "2026-01-30 19:23:47",
+      "created_at": "2026-01-31 15:19:17",
+      "completed_at": "2026-01-31 15:19:37",
       "participants": [
         {
           "role": "player1",
@@ -1560,21 +1662,21 @@
       "outcome": {
         "winner_model_id": 19,
         "player1_score": 2,
-        "player2_score": 1,
+        "player2_score": 0,
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-548.json"
+      "artifacts_ref": "artifacts/rps-match-738.json"
     },
     {
-      "run_id": "rps-match-547",
+      "run_id": "rps-match-737",
       "benchmark_id": "rps",
       "run_type": "match",
-      "match_id": 547,
+      "match_id": 737,
       "match_type": "bo3",
       "status": "completed",
-      "created_at": "2026-01-30 19:22:49",
-      "completed_at": "2026-01-30 19:23:26",
+      "created_at": "2026-01-31 15:18:58",
+      "completed_at": "2026-01-31 15:19:16",
       "participants": [
         {
           "role": "player1",
@@ -1592,115 +1694,13 @@
         }
       ],
       "outcome": {
-        "winner_model_id": 1,
-        "player1_score": 1,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-547.json"
-    },
-    {
-      "run_id": "rps-match-546",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 546,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-30 19:21:18",
-      "completed_at": "2026-01-30 19:22:48",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        },
-        {
-          "role": "player2",
-          "model_id": 16,
-          "provider": "deepseek",
-          "model_name": "deepseek-reasoner",
-          "display_name": "deepseek/deepseek-reasoner"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 16,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-546.json"
-    },
-    {
-      "run_id": "rps-match-545",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 545,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-30 19:20:13",
-      "completed_at": "2026-01-30 19:21:17",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        },
-        {
-          "role": "player2",
-          "model_id": 15,
-          "provider": "deepseek",
-          "model_name": "deepseek-chat",
-          "display_name": "deepseek/deepseek-chat"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 18,
+        "winner_model_id": 19,
         "player1_score": 2,
         "player2_score": 0,
         "is_draw": false
       },
       "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-545.json"
-    },
-    {
-      "run_id": "rps-match-544",
-      "benchmark_id": "rps",
-      "run_type": "match",
-      "match_id": 544,
-      "match_type": "bo3",
-      "status": "completed",
-      "created_at": "2026-01-30 19:19:01",
-      "completed_at": "2026-01-30 19:20:12",
-      "participants": [
-        {
-          "role": "player1",
-          "model_id": 18,
-          "provider": "mistral",
-          "model_name": "magistral-medium-latest",
-          "display_name": "mistral/magistral-medium-latest"
-        },
-        {
-          "role": "player2",
-          "model_id": 21,
-          "provider": "google",
-          "model_name": "gemini-2.5-flash-lite",
-          "display_name": "google/gemini-2.5-flash-lite"
-        }
-      ],
-      "outcome": {
-        "winner_model_id": 21,
-        "player1_score": 0,
-        "player2_score": 2,
-        "is_draw": false
-      },
-      "error_message": null,
-      "artifacts_ref": "artifacts/rps-match-544.json"
+      "artifacts_ref": "artifacts/rps-match-737.json"
     }
   ],
   "runs_file": "runs.jsonl"
