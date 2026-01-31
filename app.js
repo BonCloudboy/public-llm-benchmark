@@ -235,9 +235,44 @@ async function loadRunDetail(artifactPath, detailContainer) {
     const match = artifact.match || {};
     const rounds = match.rounds || [];
 
+    const player1Name = match.player1?.display_name || 'Player 1';
+    const player2Name = match.player2?.display_name || 'Player 2';
+    const roundsMarkup = rounds.length
+      ? `
+        <div class="rounds">
+          <div class="rounds-header">
+            <span>Round</span>
+            <span>${player1Name}</span>
+            <span>${player2Name}</span>
+            <span>Winner</span>
+          </div>
+          <div class="rounds-body">
+            ${rounds
+              .map((round) => {
+                const winner =
+                  round.winner_id === match.player1?.id
+                    ? player1Name
+                    : round.winner_id === match.player2?.id
+                      ? player2Name
+                      : 'Draw';
+                return `
+                  <div class="rounds-row">
+                    <span>#${round.round_number}</span>
+                    <span>${round.player1_choice || '-'}</span>
+                    <span>${round.player2_choice || '-'}</span>
+                    <span>${winner}</span>
+                  </div>
+                `;
+              })
+              .join('')}
+          </div>
+        </div>
+      `
+      : '<p class="muted">No round data available.</p>';
+
     target.innerHTML = `
       <h3>Run Detail</h3>
-      <p><strong>Match:</strong> ${match.player1?.display_name || '-'} vs ${match.player2?.display_name || '-'}</p>
+      <p><strong>Match:</strong> ${player1Name} vs ${player2Name}</p>
       <p><strong>Status:</strong> ${match.status || '-'}</p>
       <p><strong>Winner:</strong> ${match.winner?.display_name || 'Draw'}</p>
       <p><strong>Rounds:</strong> ${rounds.length}</p>
@@ -245,6 +280,7 @@ async function loadRunDetail(artifactPath, detailContainer) {
         <span>Created: ${formatDate(match.created_at)}</span>
         <span>Completed: ${formatDate(match.completed_at)}</span>
       </div>
+      ${roundsMarkup}
     `;
     target.classList.remove('hidden');
   } catch (error) {
