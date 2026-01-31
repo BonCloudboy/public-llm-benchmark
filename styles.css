@@ -42,6 +42,11 @@ body {
   min-height: 100vh;
 }
 
+html,
+body {
+  max-width: 100%;
+}
+
 h1,
 h2,
 h3,
@@ -116,6 +121,7 @@ h5 {
   box-shadow: 0 18px 40px -30px var(--shadow);
   border-radius: 0;
   padding: 24px;
+  min-width: 0;
 }
 
 .panel-header {
@@ -241,6 +247,7 @@ table {
   border-collapse: collapse;
   margin-top: 16px;
   font-size: 0.95rem;
+  table-layout: fixed;
 }
 
 th,
@@ -248,6 +255,8 @@ td {
   text-align: left;
   padding: 12px 10px;
   border-bottom: 1px solid var(--line);
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 th {
@@ -310,6 +319,15 @@ th {
   border: 1px solid var(--line);
 }
 
+.run-card strong,
+.run-meta span,
+.run-detail p,
+.meta-description,
+.stat-label,
+.tab {
+  overflow-wrap: anywhere;
+}
+
 .muted {
   color: var(--muted);
 }
@@ -351,10 +369,17 @@ th {
   color: var(--muted);
 }
 
+.rounds-row span {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
 .table-scroll {
   width: 100%;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  max-width: 100%;
 }
 
 .stats-grid {
@@ -453,6 +478,14 @@ th {
 }
 
 @media (max-width: 720px) {
+  body {
+    font-size: 0.9rem;
+  }
+
+  .site-header h1 {
+    font-size: 2rem;
+  }
+
   .site-header {
     align-items: flex-start;
   }
